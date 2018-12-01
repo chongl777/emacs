@@ -1,12 +1,10 @@
 import os
 
-from flask import Flask, jsonify, send_from_directory
-from flask_bootstrap import Bootstrap
+from flask import Flask, jsonify, send_from_directory, url_for
 from flask_sqlalchemy import SQLAlchemy
 from flask_login import LoginManager
 
 
-bootstrap = Bootstrap()
 this_folder = os.path.dirname(os.path.abspath(__file__))
 db = SQLAlchemy()
 loginMgmr = LoginManager()
@@ -42,8 +40,11 @@ def create_app(name, config):
 
     db.init_app(app)
     loginMgmr.init_app(app)
-    loginMgmr.login_view = app.config['AUTHADDR'] + '/login'
-    bootstrap.init_app(app)
+    # bootstrap.init_app(app)
+
+    @app.before_first_request
+    def activate_job():
+        loginMgmr.login_view = url_for('auth.login', _external=True)
 
     from .auth import bp as auth_bp
     app.register_blueprint(auth_bp, url_prefix='/auth')
