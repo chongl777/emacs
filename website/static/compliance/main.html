@@ -1,0 +1,136 @@
+{% extends "base.html" %}
+
+{% block scripts %}
+{% endblock %}
+
+{% block styles %}
+{{super()}}
+<!-- 3rd party package -->
+<script src="./static/src/jquery/jquery.js"></script>
+
+<link href="./static/src/jquery/stylesheets/jquery-ui.css" rel="stylesheet">
+<script src="./static/src/jquery/jquery-ui.js" type="text/javascript"></script>
+
+<link href="./static/src/jquery.gridster/jquery.gridster.css" rel="stylesheet">
+<script src="./static/src/jquery.gridster/jquery.gridster.js" type="text/javascript"></script>
+
+<script src="./static/src/numeral/numeral.js" type="text/javascript"></script>
+
+<script src="./static/src/knockout-3.4.2/knockout.debug.js" type="text/javascript"></script>
+
+<link href="./static/src/datatable/datatables.css" rel="stylesheet">
+<script src="./static/src/datatable/datatables.js" type="text/javascript"></script>
+
+<link href="./static/src/chosen/chosen.css" rel="stylesheet">
+<script src="./static/src/chosen/chosen.jquery.js" type="text/javascript"></script>
+
+<link href="./static/src/vis-4.21.0/vis.css" rel="stylesheet">
+<script src="./static/src/vis-4.21.0/vis.js", type="text/javascript"></script>
+
+<script src="./static/src/handlebars/handlebars-v4.0.11.js" type="text/javascript"></script>
+
+<script src="./static/src/spjs_utility/spjs-utility.js", type="text/javascript"></script>
+<script src="./static/src/d3/d3.js" type="text/javascript"></script>
+
+<script src="./static/src/widget/search.bar/searchbar.js", type="text/javascript"></script>
+<link href="./static/src/widget/search.bar/searchbar.css" rel="stylesheet">
+
+<script src="./static/src/loadingIcon/loadingIcon.js" type="text/javascript"></script>
+
+<link href="./static/compliance/css/style.css", rel="stylesheet"/>
+<script src="./static/compliance/src/script.js", type="text/javascript"></script>
+{% endblock %}
+
+{% block app_content %}
+
+<div id="div-tables" style="display: inline-grid">
+  <div id="div-user-input" style="display: inline-block; position: relative;">
+    <table id="user-input" class="compliance-table">
+      <thead>
+        <tr>
+          <th style="width: 20%"></th>
+          <th style="width: 80%"></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><label>Fund Description</label></td>
+          <td>
+            <div id="fund-desc" class="input-box big"></div>
+          </td>
+        </tr>
+
+        <tr>
+          <td><label>Fund Id</label></td>
+          <td><div id="fund-id" class="input-box" data-bind="text: fundId, attr: {value: fundId}"></div></td>
+        </tr>
+
+        <tr>
+          <td><label>As Of Date</label></td>
+          <td><div id="t-date">
+            <input type="date" data-bind="textInput: as_of_date, attr: {value: as_of_date}">
+          </div></td>
+        </tr>
+
+        <tr>
+          <td><label>Date Basis</label></td>
+          <td><div id="date-basis" class="input-box">
+            <select data-bind="value: date_basis, options: date_basis_options">
+
+            </select>
+          </div></td>
+        </tr>
+
+        <tr>
+          <td><label>Cost Basis</label></td>
+          <td><div id="cost-basis" class="input-box">
+            <select data-bind="value: cost_basis, options: cost_basis_options">
+
+            </select>
+          </div></td>
+        </tr>
+
+        <tr>
+          <td><label>Retain</label></td>
+          <td><div id="retain" class="input-box">
+            <select data-bind="value: retain, options: retain_options">
+
+            </select>
+          </div></td>
+        </tr>
+
+        <tr>
+          <td><label>User Notes</label></td>
+          <td><div id="user-notes" >
+            <textarea style="width:500px; height: 200px; resize:none" data-bind="value: comments"></textarea>
+          </div></td>
+        </tr>
+
+        <tr>
+          <td colspan="2" style="text-align: right; padding-right: 20px; padding-bottom: 20px" data-bind="click: submit"><button>submit</button></td>
+        </tr>
+
+      </tbody>
+    </table>
+  </div>
+
+  <div id="div-result" style="display: inline-block; position: relative;">
+    <table id="result" class="compliance-table">
+      <thead>
+        <tr>
+          <th style="width: 20%"></th>
+          <th style="width: 80%"></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><label>Snapshot ID</label></td>
+          <td>
+            <div id="snapshot-Id" class="input-box big" data-bind="text: snapshot"></div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+ {% endblock %}

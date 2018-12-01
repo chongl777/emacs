@@ -1,0 +1,83 @@
+
+/*Form 1 CSS*/
+/*br {
+  clear:both;
+}*/
+
+
+.compliance-table {
+    font-family: Verdana;
+    font-size: 10pt;
+    margin-top: 10px;
+    background-color: #f3f3f3;
+    border: solid 1px #a1a1a1;
+    padding: 10px;
+    width: 1000px;
+    /* height:115px; */
+  }
+
+.compliance-table label {
+  text-align: right;
+  padding-right: 10px;
+  width: 200px;
+}
+
+.compliance-table td {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+.compliance-table br {
+  clear:both;
+}
+
+.compliance-table #fund-desc {
+  display: inline-block;
+
+}
+
+table.compliance-table #fund-desc, #user-input #fund-desc input {
+  background-color: transparent;
+}
+
+
+.compliance-table #fund-desc button {
+  display: inline-block;
+}
+
+/*Button CSS*/
+
+.My_Button{
+  color: #FFF;
+  background: #0073ad;
+  border: 2px outset #0073ad;
+  float: right;
+  cursor: pointer;
+  height:28px;
+}
+
+.input-box.big {
+  width: 400px;
+}
+
+.input-box {
+  border-style: groove;
+  display: inline-box;
+  width: 170px;
+  height: 25px;
+  border-width: 1px;
+}
+
+.input-box * {
+  color: steelblue!important;
+}
+
+.input-box select {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+#snapshot-Id {
+  color: red;
+}

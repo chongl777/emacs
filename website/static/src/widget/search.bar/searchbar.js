@@ -50,7 +50,7 @@
         update_fn(inputtext, update_selectoptions.bind(input))
     }
 
-    $.fn.wfi_autocomplete = function(options={}) {
+    $.fn.input_autocomplete = function(options={}) {
         var company_list = [];
         var self = this;
         var update_fn = options['update_fn'];

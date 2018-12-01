@@ -3,7 +3,7 @@ from .. import db
 from flask_login import UserMixin
 from werkzeug.security import generate_password_hash, check_password_hash
 
-from office365.runtime.auth.authentication_context import AuthenticationContext
+# from office365.runtime.auth.authentication_context import AuthenticationContext
 
 
 def check_office_365_password(username, password):
@@ -31,11 +31,11 @@ class User(UserMixin, db.Model):
     def set_password(self, password):
         self.password_hash = generate_password_hash(password)
 
-    # def check_password(self, password):
-    #     return check_password_hash(self.password_hash, password)
-
     def check_password(self, password):
-        return check_office_365_password(self.email, password)
+        return check_password_hash(self.password_hash, password)
+
+    # def check_password(self, password):
+    #     return check_office_365_password(self.email, password)
 
     @property
     def initial(self):

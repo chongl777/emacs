@@ -10,7 +10,7 @@
 {% endblock %}
 
 {% block navbar %}
-    <nav class="navbar navbar-default">
+    <nav class="navbar navbar-default" style="display: {% if navbar_display %}{{ navbar_display }} {% else %}block{% endif %}">
         <div class="container">
             <div class="navbar-header">
               <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
@@ -30,16 +30,18 @@
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                     {% if current_user.is_anonymous %}
-                    <li><a href="{{ config.AUTHADDR+'/login' }}">Login</a></li>
+                    <li><a href="{{ url_for('auth.login', _external=True) }}">Login</a></li>
                     {% else %}
-                    <li><a href="{{ config.AUTHADDR+'/user' }}"
+                    <!-- <li><a href="{{ url_for('auth.user', username=current_user.username) }}">Profile</a></li> -->
+                    <li><a id="current-user-name" href="{{ url_for('auth.user', _external=True) }}"
+					       username="{{ current_user.username }}"
                            style="border-radius: 50%; background-color: steelblue;
                                   margin: 5px; height: 30px; width: 30px;
                                   padding-left: 7px; padding-top: 5px;
                                   font-weight: bold; font-family: initial;
                                   font-size: 12px; color: white;">
                         {{ current_user.initial }}</a></li>
-                    <li><a href="{{ config.AUTHADDR+'/logout' }}">Logout</a></li>
+                    <li><a href="{{ url_for('auth.logout', _external=True) }}">Logout</a></li>
                     {% endif %}
                 </ul>
             </div>
