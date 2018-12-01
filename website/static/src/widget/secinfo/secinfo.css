@@ -1,0 +1,70 @@
+/* rolling stats plots*/
+div.wfi-sec-info {
+  font: 10px sans-serif;
+}
+
+div.wfi-sec-info table tbody{
+  table-layout: fixed;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  background-color: transparent;
+}
+
+div.wfi-sec-info table tbody td {
+  padding: 4px 10px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+div.wfi-sec-info table tbody tr td:nth-child(2) {
+  text-align: right;
+}
+
+div.wfi-sec-info table thead th{
+  text-align: left;
+  padding: 5px 10px;
+}
+
+div.wfi-sec-info table thead{
+  display: none;
+}
+
+div.wfi-sec-info table tbody tr.group td {
+  padding: 4px 2px 5px;
+  cursor: default;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-weight: bold;
+  color: black;
+}
+
+div.wfi-sec-info table tbody tr.group {
+  background-color: #e0e0e0;
+}
+
+div.wfi-sec-info table tbody tr {
+  border-bottom: 1px solid #e0e0e0;
+  margin: 0px;
+  background-color: transparent;
+}
+
+div.wfi-sec-info table {
+  border-collapse: collapse;
+  border-bottom: none;
+  table-layout: fixed;
+}
+
+div.wfi-sec-info table .value{
+  font-weight: bold;
+  text-align: right;
+}
+
+div.wfi-sec-info td.positive {
+  color: green;
+}
+
+div.wfi-sec-info td.negative {
+  color: red;
+}
