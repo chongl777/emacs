@@ -81,8 +81,8 @@ div.wfi-data-table table.child-table>thead {
 #OVER div.wfidatatable.args-dlg {
   border: 1px solid #ccc;
   box-shadow: 0 5px 10px rgba(0, 0, 0, .2);
-  border-radius: 6px;
-  background-color: #ECECEC;
+  border-radius: 0px;
+  background-color: white;
   position: fixed;
   display: block;
   overflow: auto;
@@ -93,10 +93,6 @@ div.wfi-data-table table.child-table>thead {
   color: #000;
   overflow: hidden;
   padding: 12px 21px 15px 13px;
-}
-
-#OVER div.wfidatatable.args-dlg div.dlgTitle h1 {
-  font-size: 18px;
 }
 
 #OVER div.wfidatatable.args-dlg table#content span.multiselect-native-select .btn-group>button,
@@ -110,4 +106,28 @@ div.wfi-data-table table.child-table>thead {
 #OVER div.wfidatatable.args-dlg table#content span.multiselect-native-select,
 #OVER div.wfidatatable.args-dlg table#content span.multiselect-native-select .btn-group {
   width: 100%;
+}
+
+#OVER div.wfidatatable input[type=button][disabled] {
+  color: grey;
+  cursor: wait;
+}
+
+#OVER div.wfidatatable div.dlgTitle div#title {
+  background-color: rgb(245, 245, 245);
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  padding: 3px 18px;
+}
+
+#OVER div.wfidatatable div#title h1 {
+  margin: 4px 0px 4px 0px;
+  font-size: 12px;
+  font-weight: 400;
+}
+
+#OVER div.wfidatatable table#content tr {
+  margin: 20px;
+  height: 30px;
 }

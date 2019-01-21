@@ -52,20 +52,22 @@
             dlg.css("top", $(window).height()/2-210)
                 .css('left', $(window).width()/2-315);
             dlg.html(
-            '<div class="dlgTitle" style="cursor: move; position:relative; clear:both; padding: 10px"> \
-                 <h1 style="float: left; margin-top: 0px; margin-button: 0px">Setup Parameters</h1> \
-                 <span id="TitleBtns" class="dlgTitleBtns" style="float: right; margin:0px;"> \
-                   <a class="dlgCloseBtn" title="Close dialog" href="javascript:;" accesskey="C"> \
-                     <span style="padding:0px;height:16px;width:16px;display:inline-block"> \
-                       <span style="height:16px;width:16px; position:relative; \
-                          display:inline-block; overflow:hidden;" class="s4-clust"> \
-                          <img src="/_layouts/15/images/fgimg.png?rev=23" alt="Close dialog" \
-                           style="left:-0px !important;top:-645px !important;position:absolute;" \
-                           class="ms-dlgCloseBtnImg"> \
-                       </span> \
+            '<div class="dlgTitle" style="cursor: move; position:relative; clear:both; padding: 0px"> \
+                 <div id="title"> \
+                     <h1 style="float: left; ">Setup Parameters</h1> \
+                     <span id="TitleBtns" class="dlgTitleBtns" style="float: right; margin:0px;"> \
+                       <a class="dlgCloseBtn" title="Close dialog" href="javascript:;" accesskey="C"> \
+                         <span style="padding:0px;height:16px;width:16px;display:inline-block"> \
+                           <span style="height:16px;width:16px; position:relative; \
+                              display:inline-block; overflow:hidden;" class="s4-clust"> \
+                              <img src="./static/src/images/fgimg.png?rev=23" alt="Close dialog" \
+                               style="left:-0px !important;top:-645px !important;position:absolute;" \
+                               class="ms-dlgCloseBtnImg"> \
+                           </span> \
+                         </span> \
+                       </a> \
                      </span> \
-                   </a> \
-                 </span> \
+                 </div> \
              </div> \
              <table id="content" align="center"> \
                   <tbody> </tbody> \
@@ -74,10 +76,10 @@
                  <table id="submit-button" style="width:100%"> \
                      <tr> \
                         <td align="center"> \
-                          <input type="button" value="Okay" data-bind="click: submit"/> \
+                          <input type="button" value="Okay" data-bind="click: submit, enable: enable"/> \
                         </td> \
                         <td align="center"> \
-                          <input type="button" value="Cancel"/> \
+                          <input type="button" value="Cancel" data-bind="enable: enable"/> \
                         </td> \
                      </tr> \
                   </table> \
@@ -91,11 +93,113 @@
             // overlay.start_loading = function() {$('#ImageProgress', overlay).css('display', 'inline-block')};
             // overlay.end_loading = function() {$('#ImageProgress', overlay).css('display', 'none')};
             $('body').append(overlay);
-            ko.applyBindings(self.options['input_args'], overlay[0]);
 
+            function start_loading() {
+                self.options.input_args.enable(false);
+                document.body.style.cursor = "wait"
+            }
+
+            function end_loading() {
+                self.options.input_args.enable(true);
+                document.body.style.cursor = "default"
+            }
+
+            self.options['input_args']['submit'] = function() {
+                self.removeDlg();
+                start_loading.call(self);
+                var f = self.options['input_args']['submit_func'] ||
+                        function() {
+                            try {
+                                updateWithData.call(self.tbl, clone(self.rawdata), self.options);
+                            } catch(error) {
+                                console.log(error);
+                            };
+                            end_loading.call(self);}
+                f.call(self);
+                self.options.update();
+            };
+            self.options.input_args.enable = ko.observable(true);
+
+            ko.applyBindings(self.options['input_args'], overlay[0]);
             $(".boost-multiselect", dlg).multiselect({
                 includeSelectAllOption: true
             });
+        }
+
+        self.open_download_setup = function() {
+            var overlay = $('<div>');
+            var removeDlg = function() {overlay.remove();}
+            self.removeDlg = removeDlg;
+            overlay.attr('id', 'OVER');
+            overlay.html('<div class="wfidatatable args-dlg 1tgt-px-dlg" style="width: 400px; height:auto;"></div>');
+
+            var dlg = $('div.args-dlg', overlay);
+            dlg.css("top", $(window).height()/2-210)
+                .css('left', $(window).width()/2-315);
+            dlg.html(
+            '<div class="dlgTitle" style="cursor: move; position:relative; clear:both; padding: 0px"> \
+                 <div id="title"> \
+                     <h1 style="float: left;">Downlaod Data</h1> \
+                 </div> \
+             </div> \
+             <table id="content" align="center"> \
+                  <tbody> \
+                     <tr><td> \
+                     <table style="width:300px"> \
+                         <colgroup><col width="20%"><col width="80%"> \
+                         </colgroup> \
+                         <tbody> \
+                             <tr> \
+                                <td colspan="1">FileName</td> \
+                                <td colspan="1" class="value"> \
+                                    <div style="display:flex"> \
+                                        <input style="width:90%" data-bind="value:file_name" style="text-align:right;"> \
+                                        <div><p style="display:block; margin: 2px 0px 2px 0px">.csv</p></div>\
+                                    </div> \
+                                </td> \
+                             </tr> \
+                         </tbody> \
+                     </table> \
+                     </tr></td>\
+                  </tbody> \
+             </table> \
+             <div class="dlgSetupButton" style="padding:10px"> \
+                 <table id="submit-button" style="width:100%"> \
+                     <tr> \
+                        <td align="center"> \
+                          <input type="button" value="download" data-bind="click: submit, enable: enable"/> \
+                        </td> \
+                        <td align="center"> \
+                          <input type="button" value="Cancel" data-bind="enable: enable"/> \
+                        </td> \
+                     </tr> \
+                  </table> \
+             </div>');
+
+            dlg.draggable({handle: 'div.dlgTitle'});
+            $('a.dlgCloseBtn, input[value="Cancel"]', dlg).on("click", removeDlg);
+            overlay.removeDlg = removeDlg;
+
+            function start_loading() {
+                args.enable(false);
+                document.body.style.cursor = "wait"
+            }
+
+            function end_loading() {
+                args.enable(true);
+                document.body.style.cursor = "default"
+            }
+
+            $('body').append(overlay);
+            var args = {
+                file_name: self.options['filename'] || 'downlaod',
+                enable: ko.observable(true),
+                submit: function() {
+                    start_loading();
+                    self.options['download'](args.file_name+".csv", self.rawdata, function() {
+                        end_loading();
+                        removeDlg();})}};
+            ko.applyBindings(args, overlay[0]);
         }
 
         return this;
@@ -112,27 +216,26 @@
         self.options['options'] = self.options['options'] || function() {};
         self.options['scrollCollapse'] = self.options['scrollCollapse'] || true;
         self.options['scrollY'] = self.options['scrollY'] || '';
+        self.options['init_expansion_level'] = self.options['init_expansion_level'] || 0;
+        self.options['start_expansion_level'] = self.options['start_expansion_level'] || 0;
+        self.options['total_expansion_level'] = self.options['total_expansion_level'] || Number.MAX_VALUE;
 
         self.options['update'] = self.options['update'] || function(){};
         self.options['process_row'] = self.options['process_row'] || function(){};
         self.options['sort_by'] = self.options['sort_by'] || [];
         self.options['process_child_data'] = self.options['process_child_data'] || function() {};
 
+        self.options['bPaginate'] = self.options['bPaginate'] || false;
+        self.options['iDisplayLength'] = self.options['iDisplayLength'] || 50;
+        self.options['aLengthMenu'] = self.options['aLengthMenu'] || [[25, 50, 75, 100, -1], [25, 50, 75, 100, "All"]];
+
+        self.options['groupdataProcess'] = self.options['groupdataProcess'] || function(x) {};
+
+        self.options['postProcess'] = self.options['postProcess'] || function(x) {};
+        self.options['flatten'] = self.options['flatten'] || false;
+
         self.options['input_args'] = self.options['input_args'] || {};
-        self.options['input_args']['submit'] = function() {
-            self.removeDlg();
-            start_loading.call(self);
-            var f = self.options['input_args']['submit_func'] ||
-                    function() {
-                        try {
-                            updateWithData.call(self.tbl, clone(self.rawdata), self.options);
-                        } catch(error) {
-                            console.log(error);
-                        };
-                        end_loading.call(self);}
-            f.call(self);
-            self.options.update();
-        };
+        self.options['download'] = self.options['download'] || function() {};
     }
 
     function add_table(self) {
@@ -147,7 +250,11 @@
         var columns_setup = self.options['columns_setup'];
 
         self.tbl = $(widget).DataTable({
-            bPaginate: false, bFilter: false, bInfo: false,
+            // bPaginate: false,
+            bPaginate: self.options['bPaginate'],
+            iDisplayLength: self.options['iDisplayLength'],
+            aLengthMenu: self.options['aLengthMenu'],
+            bFilter: false, bInfo: false,
             bDestroy: true,
             bSort: false,
             fixedHeadero: true,
@@ -165,9 +272,11 @@
             self.options.process_child_data.call(self, data, depth);
             var html = $(' \
                <table class="child-table ' + self.options.group_columns[depth] + ' depth-' + depth + ' "> \
-               </table>');
+               </table>', self);
             var tbl = html.DataTable({
-                bPaginate: false, bFilter: false, bInfo: false,
+                bPaginate: false,
+                // bPaginate: true,
+                bFilter: false, bInfo: false,
                 bDestroy: true,
                 bSort: false,
                 fixedHeader: true,
@@ -192,12 +301,13 @@
             var api = this.api();
 
             var key = obj.options['keyfield'];
-            var init_expand = obj.options['init_expand'];
+            var init_expand = obj.options['init_expansion_level'];
+            var total_expand = obj.options['total_expansion_level'];
 
             var rows = api.rows().nodes();
             var last = null;
             api.rows().data().each(function(data, i) {
-                if (data.children) {
+                if (data.children && data.depth < total_expand) {
                     //var row = self.tbl.row(rows[i]);
                     var childtbl = add_child_table(data.children, data.depth);
                     // row.child(childtbl).show();
@@ -222,8 +332,12 @@
                         }
                     );
                 }
-                self.options.process_row.call(self, rows[i], data);
+                if (!rows[i].Processed) {
+                    self.options.process_row.call(self, rows[i], data);
+                    rows[i].Processed = true;
+                }
             });
+            obj.options.postProcess(self);
         }
     }
 
@@ -240,13 +354,20 @@
         } else {
             data = apply_attr(data);
         }
+
         var res = options.sort(data);
-        for (var i=0; i<options['init_level']; i++) {
+        for (var i=0; i<options.start_expansion_level; i++) {
             var n = res.length;
             for(var j=0; j<n; j++) {
                 res.unshift.apply(res, res.pop().children);
             }
         }
+
+        if (options.flatten) {
+            flatten(data, 'children', options.total_expansion_level);
+        }
+
+        options.groupdataProcess(res);
         updateData.call(self, res, options);
     };
 
@@ -293,8 +414,6 @@
         data.forEach(function(p) {
             addmember.call(dtgrp, p, grpcols, keyfield);
         });
-
-        var partition = d3.layout.partition();
 
         aggfun(dtgrp)
         return dtgrp.children;
@@ -360,7 +479,20 @@
         return newdata;
     }
 
-    // update elements
-    var updateWithLoadingIcon = function() {
+    function flatten(data, keyword, lvl=null) {
+        if (data == null || data.length == 0) return;
+        var dummy = data.slice();
+        dummy.forEach(function (x, i) {
+            if (x.depth == 1)
+                var aa = 1;
+            if (x[keyword] != null) {
+                if (lvl==null || x.depth <= lvl) {
+                    flatten(x[keyword], keyword, lvl);
+                    data.splice.apply(data, [data.indexOf(x)+1, 0].concat(x[keyword]));
+                }
+                delete x[keyword];
+            }
+        });
     }
+
 })(jQuery);
