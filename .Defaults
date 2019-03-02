@@ -1,0 +1,17 @@
+xterm*background: black
+xterm*foreground: white
+xterm*cursorColor: LightBlue
+# xterm*pointerShape: arrow
+xterm*pointerColor: blue
+
+xterm*loginShell: true
+xterm*vt100*geometry: 120x40
+
+
+# Make text bright, not fat, when it is bold
+xterm*boldMode: false
+xterm*colorBDMode: true
+xterm*colorBD: rgb:fc/fc/fc
+
+# Tell everyone we support 256 colors
+xterm*termName: xterm-color
