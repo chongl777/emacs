@@ -1,0 +1,312 @@
+;;; -*- coding: utf-8 -*-
+
+;; ----- ido-last-directory-list -----
+(
+ ("c:/Users/cliu.WFI/AppData/Roaming/emacs/libs/" . "python/")
+ ("c:/Users/cliu.WFI/AppData/Roaming/emacs/" . "libs/")
+ ("c:/Users/cliu.WFI/Desktop/WFI/pylib/website/static/securityprofile/" . "css/")
+ ("c:/Users/cliu.WFI/Desktop/WFI/pylib/libs/books/" . "lots/")
+ ("c:/Users/cliu.WFI/Desktop/WFI/pylib/FixDropCopy/" . "pem_uat_tw/")
+ ("c:/Users/cliu.WFI/Desktop/WFI/pylib/libs/mktdata/" . "__pycache__/")
+ ("c:/Users/cliu.WFI/Desktop/WFI/pylib/autojob/" . "impl/")
+ ("c:/Users/cliu.WFI/Desktop/WFI/pylib/website/static/paperportfolio/" . "css/")
+ ("c:/Users/cliu.WFI/Desktop/WFI/pylib/libs/zipline/" . "utils/")
+ ("c:/Users/cliu.WFI/Desktop/WFI/pylib/libs/zipline/finance/" . "metrics/")
+ ("c:/Users/cliu.WFI/Desktop/WFI/pylib/libs/app_template/auth/" . "__pycache__/")
+ ("c:/Users/cliu.WFI/Desktop/WFI/pylib/website/static/securityscreening/" . "css/")
+ ("c:/Users/cliu.WFI/Desktop/WFI/pylib/website/static/sensitivityanalysis/" . "src/")
+ ("c:/Users/cliu.WFI/Desktop/WFI/pylib/website/static/factsheet/" . "css/")
+ ("c:/Users/cliu.WFI/Desktop/WFI/pylib/libs/app_template/" . "__pycache__/")
+ ("c:/Users/cliu.WFI/Desktop/WFI/pylib/website/static/marketsurveillance/" . "src/")
+ ("c:/Users/cliu.WFI/Desktop/WFI/pylib/website/" . "static/")
+ ("c:/Users/cliu.WFI/Desktop/WFI/pylib/website/static/portfolioanalytics/" . "src/")
+ ("c:/Users/cliu.WFI/Desktop/WFI/pylib/website/static/src/widget/" . "wfi.search.bar/")
+ ("c:/Users/cliu.WFI/Desktop/WFI/pylib/website/static/src/" . "widget/")
+ ("c:/Users/cliu.WFI/Desktop/WFI/pylib/website/static/" . "src/")
+ ("c:/Users/cliu.WFI/Desktop/WFI/pylib/test/" . "sharepoint_test/")
+ ("c:/Users/cliu.WFI/Desktop/WFI/pylib/libs/" . "EMC/")
+ ("c:/Users/cliu.WFI/Desktop/WFI/pylib/workstation/" . "impl/")
+ ("c:/Users/cliu.WFI/AppData/Roaming/" . ".matplotlib/")
+ ("c:/Users/cliu.WFI/Desktop/WFI/" . "pylib/")
+ ("//wfdb01@7777/DavWWWRoot/sites/Firm/SiteAssets/static/" . "src/")
+ ("c:/Users/cliu.WFI/Desktop/WFI/pylib/" . "libs/")
+ ("//wfdb01@7777/DavWWWRoot/sites/Research/SiteAssets/static/securityprofile/" . "src/")
+ ("//wfdb01@7777/DavWWWRoot/sites/Research/SiteAssets/static/src/widget/" . "plotchart/")
+ ("//wfdb01@7777/DavWWWRoot/sites/Research/SiteAssets/static/src/" . "widget/")
+ ("//wfdb01@7777/DavWWWRoot/sites/Research/SiteAssets/static/" . "src/")
+ ("c:/Users/cliu.WFI/Desktop/WFI/pylib/systematic trading/" . "backtests/")
+)
+
+;; ----- ido-work-directory-list -----
+(
+ "c:/Users/cliu.WFI/AppData/Roaming/emacs/libs/python/"
+ "c:/Users/cliu.WFI/AppData/Roaming/emacs/"
+ "c:/Users/cliu.WFI/AppData/Roaming/"
+ "c:/Users/cliu.WFI/Desktop/WFI/pylib/test/asynchronous/"
+ "c:/Users/cliu.WFI/Desktop/WFI/pylib/website/static/portfolioanalytics/"
+ "c:/Users/cliu.WFI/Desktop/WFI/pylib/researchproject/EquityMomentumInBond/"
+ "c:/Users/cliu.WFI/Desktop/WFI/pylib/libs/wfifix/"
+ "c:/Users/cliu.WFI/Desktop/WFI/pylib/FixDropCopy/"
+ "c:/Users/cliu.WFI/Desktop/WFI/pylib/autojob/"
+ "c:/Users/cliu.WFI/Desktop/WFI/pylib/autojob/impl/"
+ "c:/Users/cliu.WFI/Desktop/WFI/pylib/libs/EMC/"
+ "c:/Users/cliu.WFI/Desktop/WFI/pylib/workstation/"
+ "c:/Users/cliu.WFI/Desktop/WFI/pylib/test/database_uploadspeed/"
+ "c:/ProgramData/Anaconda3/Lib/site-packages/sqlalchemy/dialects/mssql/"
+ "c:/Users/cliu.WFI/Desktop/WFI/pylib/marketsurveillance/"
+ "c:/Users/cliu.WFI/Desktop/WFI/pylib/website/static/portfolioanalytics/src/"
+ "c:/Users/cliu.WFI/Desktop/WFI/pylib/website/static/securityprofile/src/"
+ "c:/Users/cliu.WFI/Desktop/WFI/pylib/website/static/src/widget/wfi.search.bar/"
+ "c:/Users/cliu.WFI/Desktop/WFI/pylib/website/static/securityprofile/css/"
+ "c:/Users/cliu.WFI/Desktop/WFI/pylib/website/static/portfolioanalytics/css/"
+ "css/"
+ "c:/Users/cliu.WFI/Desktop/WFI/pylib/website/static/src/widget/wfi.price.plotchart/"
+ "c:/Users/cliu.WFI/Desktop/WFI/pylib/PortfolioMgmtTool/"
+ "c:/Users/cliu.WFI/Desktop/WFI/pylib/test/SecurityManagerTest/"
+ "c:/Users/cliu.WFI/Desktop/WFI/pylib/libs/books/portfolios/"
+ "c:/Users/cliu.WFI/Desktop/WFI/pylib/libs/data/impl/"
+ "c:/Users/cliu.WFI/Desktop/WFI/pylib/libs/sqlutil/"
+ "c:/Users/cliu.WFI/Desktop/WFI/pylib/workstation/impl/"
+ "c:/Users/cliu.WFI/Desktop/WFI/pylib/libs/books/lots/"
+ "c:/Users/cliu.WFI/Desktop/WFI/pylib/libs/books/positions/"
+ "c:/Users/cliu.WFI/Desktop/WFI/pylib/libs/books/"
+ "c:/Users/cliu.WFI/Desktop/WFI/pylib/libs/zipline/finance/"
+ "c:/Users/cliu.WFI/Desktop/WFI/pylib/libs/wfifix/FIX44/"
+ "c:/Users/cliu.WFI/Desktop/WFI/pylib/libs/mqrpc/"
+ "c:/Users/cliu.WFI/Desktop/WFI/pylib/libs/mktdata/"
+ "c:/Users/cliu.WFI/Desktop/WFI/pylib/marketsurveillance/libs/"
+ "c:/Users/cliu.WFI/Desktop/WFI/pylib/PaperPortfolio/"
+ "c:/Users/cliu.WFI/Desktop/WFI/pylib/libs/tradinglibs/"
+ "c:/Users/cliu.WFI/Desktop/WFI/pylib/libs/pybbg/"
+ "c:/Users/cliu.WFI/Desktop/WFI/pylib/test/mkt_data_query/"
+ "c:/Users/cliu.WFI/Desktop/WFI/pylib/website/static/paperportfolio/"
+ "c:/Users/cliu.WFI/Desktop/WFI/pylib/website/static/paperportfolio/src/"
+ "c:/Users/cliu.WFI/Desktop/WFI/pylib/website/static/paperportfolio/css/"
+ "c:/Users/cliu.WFI/Desktop/WFI/pylib/website/static/src/widget/wfi.table/"
+ "c:/Users/cliu.WFI/Desktop/WFI/pylib/website/static/src/widget/wfi.control.panel/"
+ "c:/Users/cliu.WFI/Desktop/WFI/pylib/libs/trading_calendars/"
+ "c:/Users/cliu.WFI/Desktop/WFI/pylib/libs/zipline/"
+ "c:/Users/cliu.WFI/Desktop/WFI/pylib/libs/zipline/finance/metrics/"
+ "c:/Users/cliu.WFI/Desktop/WFI/pylib/libs/zipline/utils/"
+ "c:/Users/cliu.WFI/Desktop/WFI/pylib/libs/zipline/finance/blotter/"
+)
+
+;; ----- ido-work-file-list -----
+(
+ "python.el"
+ "custom.example.el"
+ "python-autoloads.el"
+ "python-pkg.el"
+ ".emacs"
+ "hello.py"
+ "time_test.py"
+ "portfolio_strategy_positions.html"
+ "test3.py"
+ "test2.py"
+)
+
+;; ----- ido-dir-file-cache -----
+(
+ ("c:/Users/cliu.WFI/Desktop/WFI/pylib/PortfolioMgmtTool/" (23880 24723 0 0) "__pycache__/" "save/" "risk_weight.csv" "performance_test.py" "myfile.xlsx" "logs/" "impl/" "config.py" "bp_sign_off.py" "bp_sec_profile.py" "bp_pf_risk.py" "app_pf_mgmt.py" "aa.csv" "../" "./")
+
+ ("c:/Users/cliu.WFI/AppData/Roaming/" (23880 24578 0 0) "Zoom/" "webex/" "Waves Audio/" "vstelemetry/" "Visual Studio Setup/" "UlsViewer/" "TortoiseSVN/" "Sun/" "Subversion/" "Skype/" "RingCentralMeetings/" "pyinstaller/" "Planatech/" "Opera Software/" "NVIDIA/" "NuGet/" "npm-cache/" "Notepad++/" "nltk_data/" "Mozilla/" "MiKTeX/" "Microsoft Visual Studio/" "Microsoft Teams/" "Microsoft FxCop/" "Microsoft/" "Macromedia/" "kleopatra/" "java/" "Intel Corporation/" "Intel/" "HpUpdate/" "HPPSDr/" "Hewlett-Packard Company/" "Google/" "gnupgpubring.gpg.lock" "gnupgpubring.gpg" "gnupg/" "Glip/" "FileZilla/" "emacs/" "DropboxOEM/" "Dell/" "DataRecommendations/" "Capital IQ/" "BVNMeetings/" "Azure Profiler/" "Adobe/" ".zipline/" ".python_history" ".plotly/" ".matplotlib/" ".ipython/" ".history" ".gitconfig" ".emacs.d/" ".emacs" ".conda/" "../" "./")
+
+ ("c:/Users/cliu.WFI/AppData/Roaming/emacs/libs/python/" (23878 61788 0 0) "python.elc" "python.el" "python-pkg.elc" "python-pkg.el" "python-autoloads.el" "../" "./")
+
+ ("c:/Users/cliu.WFI/AppData/Roaming/emacs/libs/" (23880 21430 0 0) "_DS_Store" "zencoding/" "yasnippet/" "web-mode/" "undo-tree/" "solarized-theme/" "smooth-scrolling/" "smex/" "smart-forward/" "slim/" "skewer-mode/" "seq/" "s/" "rename-file.el" "relative-line-numbers/" "rainbow/" "pyvenv/" "python/" "powerline/" "popup/" "php-mode/" "paredit/" "npm/" "northcode-theme/" "multiple-cursors/" "markdown-mode/" "mark-multiple/" "magit/" "let-alist/" "json/" "js2-refactor/" "js2-mode/" "js-comint/" "jade-mode/" "highlight-indentation/" "helm/" "grizzl/" "golang/" "gocode/" "go-mode/" "go-errcheck/" "git-grep/" "flycheck/" "fiplr/" "find-file-in-project/" "expand-region/" "emacs-web-server/" "elpy/" "dircolors/" "dash/" "company/" "color-theme/" "coffee-mode/" "clojure-mode/" "auto-complete/" "async/" "../" "./")
+
+ ("c:/Users/cliu.WFI/AppData/Roaming/emacs/" (22953 53992 0 0) "_travis.yml" "_gitmodules" "_gitignore" "_DS_Store" "snippets/" "profiles/" "libs/" "custom.example.el" "config/" "backup/" ".git/" "../" "./")
+
+ ("c:/Users/cliu.WFI/Desktop/WFI/pylib/test/asynchronous/" (23879 21636 0 0) "time_test.py" "hello.py" "../" "./")
+
+ ("c:/Users/cliu.WFI/Desktop/WFI/pylib/researchproject/EquityMomentumInBond/" (23867 16162 0 0) "__pycache__/" "turnover.py" "test2.py" "test.py" "mapped_data.pkl" "generate_data.py" "EMC_zip_single_name.py" "EMC_zip_30_counts_buffer_rebal_buffer_pos.py" "EMC_zip_30_counts_buffer_rebal.py" "EMC_zip_30_counts.py" "EMC_test.py" "EMC_standalone.py" "EMC_current_portfolio.py" "delete/" "data/" "count.csv" "bbgquery.py" "backtest_func.py" "backtest_data.h5" "aa.csv" "../" "./")
+
+ ("c:/Users/cliu.WFI/Desktop/WFI/pylib/libs/wfifix/" (23863 28698 0 0) "__pycache__/" "__init__.py" "transaction.py" "session.py" "server_connection.py" "message.py" "journaler.py" "FIX44/" "FIX42/" "event.py" "error.py" "engine.py" "connection.py" "codec.py" "client_engine.py" "client_control.py" "client_connection.py" "../" "./")
+
+ ("c:/Users/cliu.WFI/Desktop/WFI/pylib/FixDropCopy/" (23863 28843 0 0) "__pycache__/" "test.py" "pem_uat/" "pem_tw/" "pem_prod/" "message_test.py" "logger.py" "libs/" "fix_session_signal.py" "fix_drop_uat_tw.py" "fix_drop_uat_bbg.py" "fix_drop_uat.bat" "fix_drop_prod_tw.py" "fix_drop_prod_bbg.py" "fix_drop_prod.bat" "fix_document/" "emacs.bat" "dist/" "cert_prod/" "build/" "../" "./")
+
+ ("c:/Users/cliu.WFI/Desktop/WFI/pylib/autojob/" (23859 2599 0 0) "__pycache__/" "test.py" "impl/" "ghostdriver.log" "emacs.bat" "config.py" "config.ini" "autojob_svc.py" "app_autojob.py" "../" "./")
+
+ ("c:/Users/cliu.WFI/Desktop/WFI/pylib/autojob/impl/" (23859 4678 0 0) "__pycache__/" "__init__.py" "schedule_impl.py" "save_data/" "riskupload.py" "one_time_query.py" "ghostdriver.log" "func_security_ts.py" "func_securityscreening.py" "func_riskquery.py" "func_indx_memb.py" "func_ib_data.py" "func_fix_message_manager.py" "func_EMC_maintenance.py" "func_eia_query.py" "func_booknrecord.py" "debug.log" "dataquery_func.py" "../" "./")
+
+ ("c:/Users/cliu.WFI/Desktop/WFI/pylib/libs/zipline/finance/blotter/" (23843 39381 0 0) "__pycache__/" "__init__.py" "simulation_blotter.py" "blotter.py" "../" "./")
+
+ ("c:/Users/cliu.WFI/Desktop/WFI/pylib/libs/zipline/utils/" (23843 39072 0 0) "__pycache__/" "__init__.py" "tradingcalendar.py" "time/" "sqlite_utils.py" "simfactory.py" "sharedoc.py" "sentinel.py" "security_list.py" "run_algo.py" "range.py" "preprocess.py" "pool.py" "paths.py" "pandas_utils.py" "numpy_utils.py" "metautils.py" "memoize.py" "math_utils.py" "input_validation.py" "functional.py" "final.py" "factory.py" "exploding_object.py" "events.py" "enum.py" "dummy.py" "deprecate.py" "date_utils.py" "data.py" "context_tricks.py" "compat.py" "cli.py" "classproperty.py" "calendars.py" "cache.py" "argcheck.py" "api_support.py" "algo_instance.py" "../" "./")
+
+ ("c:/Users/cliu.WFI/Desktop/WFI/pylib/libs/zipline/finance/metrics/" (23843 39131 0 0) "__pycache__/" "__init__.py" "tracker.py" "metric.py" "core.py" "../" "./")
+
+ ("c:/Users/cliu.WFI/Desktop/WFI/pylib/libs/zipline/" (23843 37007 0 0) "__pycache__/" "__main__.py" "__init__.py" "_version.py" "_protocol.pyx" "_protocol.pyd" "_protocol.pxd" "_protocol.c" "zipline_warnings.py" "utils/" "test_algorithms.py" "testing/" "sources/" "protocol.py" "pipeline/" "lib/" "gens/" "finance/" "extensions.py" "examples/" "errors.py" "dispatch.py" "data/" "assets/" "api.pyi" "api.py" "algorithm.py" "../" "./")
+
+ ("c:/Users/cliu.WFI/Desktop/WFI/pylib/website/static/src/widget/wfi.table/" (23451 47219 0 0) "wfi.table.js" "wfi.table.css" "../" "./")
+
+ ("c:/Users/cliu.WFI/Desktop/WFI/pylib/libs/mqrpc/" (23857 58833 0 0) "__pycache__/" "__init__.py" "request_handler.py" "mqserver.py" "mqclient2.py" "mqclient.py" "errors.py" "delete/" "../" "./")
+
+ ("c:/Users/cliu.WFI/Desktop/WFI/pylib/libs/zipline/finance/" (23843 39133 0 0) "__pycache__/" "__init__.py" "_finance_ext.pyx" "_finance_ext.pyd" "transaction.py" "trading.py" "slippage.py" "shared.py" "position.py" "order.py" "metrics/" "ledger.py" "execution.py" "controls.py" "constants.py" "commission.py" "cancel_policy.py" "blotter/" "asset_restrictions.py" "../" "./")
+
+ ("c:/Users/cliu.WFI/Desktop/WFI/pylib/libs/books/" (23853 12954 0 0) "__pycache__/" "__init__.py" "transaction.py" "tracker.py" "security.py" "positions/" "portfolios/" "perfperiod.py" "lots/" "cashblotter.py" "../" "./")
+
+ ("c:/Users/cliu.WFI/Desktop/WFI/pylib/workstation/impl/" (23837 31871 0 0) "__pycache__/" "__init__.py" "trading_impl.py" "sec_mgr_impl.py" "crud.py" "../" "./")
+
+ ("c:/Users/cliu.WFI/Desktop/WFI/pylib/libs/sqlutil/" (23855 31745 0 0) "__pycache__/" "__init__.py" "sql_operation.py" "sqlquery.py" "sqlcrud.py" "security_query.py" "remote_db_flask.py" "remote_db.py" "query.py" "preloaddb.py" "memorydb.py" "func_query.py" "engines.py" "crud.py" "cacheddb.py" "../" "./")
+
+ ("c:/Users/cliu.WFI/Desktop/WFI/pylib/libs/data/impl/" (23840 8962 0 0) "__pycache__/" "__init__.py" "_impl.py" "utils.py" "swap_impl.py" "spg_impl.py" "option_impl.py" "indx_impl.py" "future_impl.py" "fund_impl.py" "equity_impl.py" "currency_impl.py" "corpbond_impl.py" "../" "./")
+
+ ("c:/Users/cliu.WFI/Desktop/WFI/pylib/libs/books/portfolios/" (23855 31869 0 0) "__pycache__/" "__init__.py" "portfolio_strategy.py" "portfolio.py" "../" "./")
+
+ ("c:/Users/cliu.WFI/Desktop/WFI/pylib/test/SecurityManagerTest/" (23840 9158 0 0) "upload_csv.py" "upload.csv" "update_security_attr.py" "update_parent_id.py" "update_company_id.py" "secmgrtest.py" "indexfuture.py" "ghostdriver.log" "fund.py" "equityfuture.py" "dvd_test.py" "derek_play.py" "data_mapping.csv" "data_equity.csv" "dataUU.csv" "dataU.csv" "create_security.py" "bond_coupon_update.py" "azure test.py" "aa.csv" "../" "./")
+
+ ("c:/Users/cliu.WFI/Desktop/WFI/pylib/test/database_uploadspeed/" (23834 25117 0 0) "tmp38gsca_0" "test_on_db.py" "compare_speed.py" "bcp.fmt" "../" "./")
+
+ ("c:/Users/cliu.WFI/Desktop/WFI/pylib/workstation/" (23837 3857 0 0) "__pycache__/" "test.py" "log/" "impl/" "ghostdriver.log" "delete/" "config.py" "bp_trading.py" "bp_secmgr.py" "app_ws.py" "../" "./")
+
+ ("c:/Users/cliu.WFI/Desktop/WFI/pylib/libs/EMC/" (23855 48327 0 0) "__pycache__/" "func_zipline_back_test.py" "func_utils.py" "../" "./")
+
+ ("c:/Users/cliu.WFI/Desktop/WFI/pylib/test/" (23855 12411 0 0) "zipline_test/" "twitter.py" "tweet_python/" "tsl_certificates/" "svg_arrow/" "ssl_test/" "sockit_test/" "socket_test/" "sharepoint_test/" "SFTP/" "sec_test.py" "SecurityManagerTest/" "seasonality/" "request/" "remote_sec/" "quickfix-master/" "PyWebServices/" "pyfix_test/" "pyfix-0.1-py3.4.egg" "progress_bar/" "playfield/" "MultiProcessServerTest/" "msg_queue/" "mqvsrest/" "mkt_data_query/" "MessageQueueServer/" "loggingTest/" "lazyobj_pickle/" "indx_mb/" "IBTrade/" "IbPy/" "Html2Pdf/" "histgram/" "gpa/" "ftp_test/" "flask_test/" "flask_server.zip" "flask_server/" "fixmessage/" "fittingtest/" "filter_in_temptable/" "excel_read/" "EmpirasignTest/" "email_test/" "emacs.bat" "eiaresponsetest/" "EDZ89.py" "download_html/" "download_encrypted/" "db_speedtest/" "database_uploadspeed/" "crude_oil/" "company_test/" "books_security/" "booksnrecords/" "bloombergySearch/" "bbg_test/" "bbg_remote/" "bbg_demo.py" "add curve/" "../" "./")
+
+ ("c:/Users/cliu.WFI/Desktop/WFI/pylib/test/EmpirasignTest/" (23855 26706 0 0) "query_example.py" "emacs.bat" "../" "./")
+
+ ("c:/Users/cliu.WFI/Desktop/WFI/pylib/website/static/securityprofile/css/" (23825 11230 0 0) "test.css" "style.css" "search_bar_style.css" "images/" "color.css" "../" "./")
+
+ ("c:/Users/cliu.WFI/Desktop/WFI/pylib/website/static/securityprofile/src/" (23827 54627 0 0) "test.js" "script.js" "delete/" "../" "./")
+
+ ("c:/Users/cliu.WFI/Desktop/WFI/pylib/marketsurveillance/" (23826 14984 0 0) "__pycache__/" "__init__.py" "wfiws_soap_app.py" "wfiws_impl.py" "pexcel.py" "Moody CBD.py" "marketsurveillance_svc.py" "marketsurveillance_impl.py" "libs/" "inventory_data.csv" "impl_oil_total.py" "impl_oil_art.py" "impl_nat_gas.py" "impl_gasoline.py" "impl_crude_spread.py" "derivsurv_impl.py" "delete/" "CRSamples.py" "config.py" "cmbx_corr.py" "cmbxroll.py" "../" "./")
+
+ ("c:/ProgramData/Anaconda3/Lib/site-packages/sqlalchemy/dialects/mssql/" (23832 53177 0 0) "__pycache__/" "__init__.py" "zxjdbc.py" "pyodbc.py" "pymssql.py" "mxodbc.py" "information_schema.py" "base.py" "adodbapi.py" "../" "./")
+
+ ("c:/Users/cliu.WFI/Desktop/WFI/pylib/libs/" (23811 49967 0 0) "__pycache__/" "__init__.py" "zipline/" "yahoo_fin/" "wkhtmltopdf/" "wfi_app_template/" "wfifix/" "webdriver/" "utils/" "trading_calendars/" "tradinglibs/" "sqlutil/" "sharepoint/" "settings/" "schedule/" "pybbg/" "pdfkit/" "patterns/" "operation/" "office365/" "mqrpc/" "mktdata/" "interactive_chart/" "ibapi-9.73.2-py3.4.egg" "gpg/" "got3/" "GnuPGHome/" "GnuPG/" "EMC/" "email_check/" "emacs.bat" "delete/" "data/" "configuration.py" "books/" "app_template/" "analytic/" "../" "./")
+
+ ("c:/Users/cliu.WFI/Desktop/WFI/pylib/libs/operation/" (23819 50946 0 0) "__pycache__/" "__init__.py" "trading.py" "test.py" "SRPB_217561_1200562312_DATA_Asset_Servi_301439_229674.xls" "SRPB_217561_1200562312_DATA_Asset_Servi_301425_166724.xls" "save_data/" "pf_alloc.py" "email_func.py" "emacs.bat" "desktop.ini" "custodian_report.py" "../" "./")
+
+ ("c:/Users/cliu.WFI/Desktop/WFI/pylib/website/static/src/widget/wfi.search.bar/" (23520 33008 0 0) "searchbar.js" "searchbar.css" "images/" "../" "./")
+
+ ("c:/Users/cliu.WFI/Desktop/WFI/pylib/website/static/securityprofile/" (23817 37940 0 0) "src/" "main.html" "delete/" "css/" "../" "./")
+
+ ("c:/Users/cliu.WFI/Desktop/WFI/pylib/website/static/portfolioanalytics/css/" (23781 28307 0 0) "style_portfoliostrategy.css" "style.css" "color_portfoliostrategy.css" "color.css" "../" "./")
+
+ ("c:/Users/cliu.WFI/Desktop/WFI/pylib/libs/zipline/data/" (23813 4033 0 0) "__pycache__/" "__init__.py" "_resample.pyx" "_resample.pyd" "_minute_bar_internal.pyx" "_minute_bar_internal.pyd" "_equities.pyx" "_equities.pyd" "_adjustments.pyx" "_adjustments.pyd" "us_equity_pricing.py" "treasuries_can.py" "treasuries.py" "session_bars.py" "resample.py" "minute_bars.py" "loader.py" "history_loader.py" "dispatch_bar_reader.py" "data_portal.py" "continuous_future_reader.py" "bundles/" "benchmarks.py" "bar_reader.py" "../" "./")
+
+ ("c:/Users/cliu.WFI/Desktop/WFI/pylib/libs/pybbg/" (23810 45170 0 0) "__pycache__/" "__init__.py" "pybbg_k.py" "../" "./")
+
+ ("c:/Users/cliu.WFI/Desktop/WFI/pylib/PaperPortfolio/" (23815 63111 0 0) "__pycache__/" "position.csv" "impl/" "config.py" "common.py" "bp_lookthrough.py" "app_papertrade.py" "aa.csv" "../" "./")
+
+ ("c:/Users/cliu.WFI/Desktop/WFI/pylib/website/static/src/widget/wfi.price.plotchart/" (23817 17396 0 0) "price.plotchart.js" "price.plotchart.css" "../" "./")
+
+ ("c:/Users/cliu.WFI/Desktop/WFI/pylib/website/static/src/widget/" (23817 17367 0 0) "wfiplotchart/" "wfiexpandabletable/" "wfi.table/" "wfi.side.bar/" "wfi.search.bar/" "wfi.price.plotchart/" "wfi.expandable.table/" "wfi.control.panel/" "wfi.cash.reconcile.table/" "sectimeline/" "seclist/" "secinfo/" "research.timeline/" "pfmonitor/" "pfccyrisk/" "finraiframe/" "drag_drop/" "drag.drop/" "delete/" "common_style.css" "../" "./")
+
+ ("c:/Users/cliu.WFI/Desktop/WFI/pylib/website/static/src/" (23800 26221 0 0) "widget/" "vis-4.21.0/" "topojson/" "spjs_utility/" "numeral/" "loadingIcon/" "knockout-3.4.2/" "jsPDF/" "jquery.gridster/" "jquery.cookie/" "jquery/" "images/" "html2canvas/" "handlebars/" "datatable/" "datamaps/" "d3/" "cookie/" "combobox/" "chosen/" "bootstrap.multiselect/" "bootstrap/" "../" "./")
+
+ ("c:/Users/cliu.WFI/Desktop/WFI/pylib/website/static/portfolioanalytics/" (23781 27907 0 0) "src/" "sensitivity_analysis.html" "portfolio_strategy_positions.html" "portfolio_positions.html" "main.html" "index.html" "css/" "../" "./")
+
+ ("c:/Users/cliu.WFI/Desktop/WFI/pylib/website/static/portfolioanalytics/src/" (23781 28183 0 0) "script_portfoliostrategy.js" "script_lookthrough.js" "script.js" "initialize_portfoliostrategy.js" "initialize.js" "delete/" "../" "./")
+
+ ("c:/Users/cliu.WFI/Desktop/WFI/pylib/libs/data/" (23810 47416 0 0) "__pycache__/" "__init__.py" "security_manager.py" "impl/" "example.py" "emacs.bat" "data_query_process.py" "connection.py" "company_manager.py" "../" "./")
+
+ ("c:/Users/cliu.WFI/Desktop/WFI/pylib/booksnrecords/" (23802 54223 0 0) "__pycache__/" "test.py" "soap_svc.py" "slim.py" "return_type.py" "impl/" "flask_svc.py" "config.py" "bp_reconcile.py" "app_bnr.py" "aa.txt" "../" "./")
+
+ ("c:/Users/cliu.WFI/Desktop/WFI/pylib/libs/zipline/assets/" (23776 43577 0 0) "__pycache__/" "__init__.py" "_assets.pyx" "_assets.pyd" "_assets.pxd" "synthetic.py" "roll_finder.py" "futures.py" "continuous_futures.pyx" "continuous_futures.pyd" "asset_writer.py" "asset_db_schema.py" "asset_db_migrations.py" "assets.py" "../" "./")
+
+ ("c:/Users/cliu.WFI/Desktop/WFI/pylib/libs/trading_calendars/" (23752 39114 0 0) "__pycache__/" "__init__.py" "_version.py" "xtks_holidays.py" "weekday_calendar.py" "utils/" "us_holidays.py" "us_futures_calendar.py" "trading_calendar.py" "precomputed_trading_calendar.py" "exchange_calendar_xwbo.py" "exchange_calendar_xtse.py" "exchange_calendar_xtks.py" "exchange_calendar_xswx.py" "exchange_calendar_xsto.py" "exchange_calendar_xshg.py" "exchange_calendar_xses.py" "exchange_calendar_xpar.py" "exchange_calendar_xosl.py" "exchange_calendar_xnze.py" "exchange_calendar_xnys.py" "exchange_calendar_xmil.py" "exchange_calendar_xmad.py" "exchange_calendar_xlon.py" "exchange_calendar_xlis.py" "exchange_calendar_xkrx.py" "exchange_calendar_xice.py" "exchange_calendar_xhkg.py" "exchange_calendar_xhel.py" "exchange_calendar_xfra.py" "exchange_calendar_xdub.py" "exchange_calendar_xcse.py" "exchange_calendar_xcbf.py" "exchange_calendar_xbru.py" "exchange_calendar_xbom.py" "exchange_calendar_xasx.py" "exchange_calendar_xams.py" "exchange_calendar_misx.py" "exchange_calendar_iepa.py" "exchange_calendar_cmes.py" "exchange_calendar_bvmf.py" "errors.py" "common_holidays.py" "calendar_utils.py" "calendar_helpers.py" "always_open.py" "../" "./")
+
+ ("c:/Users/cliu.WFI/Desktop/WFI/pylib/website/static/src/widget/wfi.control.panel/" (23451 47219 0 0) "wfi.control.panel.js" "wfi.control.panel.css" "img/" "../" "./")
+
+ ("c:/Users/cliu.WFI/Desktop/WFI/pylib/website/static/paperportfolio/css/" (23781 28307 0 0) "style.css" "color.css" "../" "./")
+
+ ("c:/Users/cliu.WFI/Desktop/WFI/pylib/website/static/paperportfolio/src/" (23799 57254 0 0) "script_paperportfolio.js" "initialize_paperportfolio.js" "delete/" "../" "./")
+
+ ("c:/Users/cliu.WFI/Desktop/WFI/pylib/website/static/paperportfolio/" (23781 27870 0 0) "src/" "portfolio_positions.html" "css/" "../" "./")
+
+ ("c:/Users/cliu.WFI/Desktop/WFI/pylib/libs/wfifix/FIX44/" (23764 54538 0 0) "__pycache__/" "__init__.py" "msgtype.py" "messages.py" "fixtags.py" "../" "./")
+
+ ("c:/Users/cliu.WFI/Desktop/WFI/pylib/libs/books/positions/" (23799 1542 0 0) "__pycache__/" "position_tax.py" "position_strategy.py" "../" "./")
+
+ ("c:/Users/cliu.WFI/Desktop/WFI/pylib/libs/books/lots/" (23800 203 0 0) "__pycache__/" "lot_tax.py" "lot_strategy.py" "lot.py" "../" "./")
+
+ ("c:/Users/cliu.WFI/Desktop/WFI/pylib/PortfolioMgmtTool/impl/" (23792 33701 0 0) "__pycache__/" "__init__.py" "sp_operation.py" "sp_func.py" "run_pfworker.bat" "pf_sign_off_impl.py" "pf_risk_worker.py" "pf_risk_impl.py" "pf_profile_client.py" "pf_lookthrough_strategy.py" "crud.py" "cached_calc.py" "../" "./")
+
+ ("c:/Users/cliu.WFI/Desktop/WFI/pylib/libs/analytic/" (23781 45282 0 0) "__pycache__/" "__init__.py" "subportfolioanalytic.py" "security_info.py" "security.py" "riskstats.py" "portfolioanalytic.py" "portfolio.py" "ghostdriver.log" "geckodriver.log" "emacs.bat" "collection/" "bondutil.py" "bondpool.py" "../" "./")
+
+ ("c:/Users/cliu.WFI/Desktop/WFI/pylib/booksnrecords/impl/" (23769 30513 0 0) "__pycache__/" "__init__.py" "test.py" "reconcile.py" "impl_reconcile.py" "impl_books.py" "../" "./")
+
+ ("c:/Users/cliu.WFI/Desktop/WFI/pylib/libs/tradinglibs/" (23734 35319 0 0) "__pycache__/" "__init__.py" "wfi_trader_single_acct.py" "utils/" "rolling_future.py" "quantopian.py" "market_manager.py" "market_data.py" "ib_client.py" "ib_account_manager.py" "api.py" "../" "./")
+
+ ("c:/Users/cliu.WFI/Desktop/WFI/pylib/marketsurveillance/libs/" (23732 50094 0 0) "__pycache__/" "weather.py" "riskutils.py" "query_ts.py" "oilutils.py" "EIAdata.py" "common.py" "../" "./")
+
+ ("c:/Users/cliu.WFI/Desktop/WFI/pylib/libs/mktdata/" (23745 56552 0 0) "__pycache__/" "__init__.py" "pyyahoo.py" "pyquandl.py" "pymktdata.py" "pyibdata.py" "pyeiadata.py" "common.py" "../" "./")
+
+ ("c:/Users/cliu.WFI/Desktop/WFI/pylib/libs/mktdata/__pycache__/" (23745 55362 0 0) "__init__.cpython-34.pyc" "pyyahoo.cpython-34.pyc" "pyquandl.cpython-34.pyc" "pymktdata.cpython-34.pyc" "pyibdata.cpython-34.pyc" "common.cpython-34.pyc" "../" "./")
+
+ ("c:/Users/cliu.WFI/Desktop/WFI/pylib/FixDropCopy/pem_uat_tw/" (23742 23844 0 0) "TW_CA_2048_SHA_2.crt" "TW_CA_2048_SHA_1.crt" "TW_CA_2048_SHA.crt" "tradeweb_ca.crt" "../" "./")
+
+ ("c:/Users/cliu.WFI/Desktop/WFI/pylib/test/mkt_data_query/" (23731 27708 0 0) "yahoo_mapping.csv" "yahoo_data_check.py" "yahoo_api.py" "unmapped.csv" "ret_diff.csv" "quandl_query.py" "quandl_api.py" "px_yahoo.csv" "px.csv" "mapped.csv" "dd.csv" "compare.csv" "aa.zip" "aa.csv" "../" "./")
+
+ ("c:/Users/cliu.WFI/Desktop/WFI/" (23707 42647 0 0) "workstation/" "westfield_cob_report_2018_10_31.pdf" "webtool/" "Vol_check.xlsx" "save/" "sample_code/" "research/" "reports/" "QuantModel.rar" "QuantModel/" "pylib/" "pyfix-0.1-py3.4/" "presentation.pptx" "presentation/" "position_transfer/" "nltk_test/" "ml/" "matlib/" "jslib/" "ibapi-9.73.2-py3.4.egg" "GnuPG/" "emacs.bat" "debug.html" "datacollect/" "cslib/" "CRC_Valuation.xlsx" "cpplib/" "company letter/" "Chong/" "cast_parent.xlsx" "bond_screening_cob_report_summary.pdf" "aapl.pdf" "../" "./")
+
+ ("c:/Users/cliu.WFI/AppData/" (23417 57034 0 0) "Roaming/" "LocalLow/" "Local/" "../" "./")
+
+ ("c:/Users/cliu.WFI/Desktop/WFI/pylib/libs/yahoo_fin/" (23724 8337 0 0) "__pycache__/" "__init__.py" "testing.py" "stock_info.py" "setup.py" "options.py" "../" "./")
+
+ ("c:/Users/cliu.WFI/Desktop/WFI/pylib/website/" (23451 47217 0 0) "static/" "../" "./")
+
+ ("c:/Users/cliu.WFI/Desktop/WFI/pylib/website/static/src/widget/secinfo/" (23451 47219 0 0) "secinfo_v2.js" "secinfo_v2.css" "secinfo.js" "secinfo.css" "../" "./")
+
+ ("c:/Users/cliu.WFI/Desktop/WFI/pylib/website/static/src/widget/research.timeline/" (23482 11156 0 0) "template.html" "sectimeline2.js" "research.timeline.js" "research.timeline.css" "edit_file.html" "../" "./")
+
+ ("c:/Users/cliu.WFI/Desktop/WFI/pylib/" (23715 24644 0 0) "YelpRating/" "workstation/" "website/" "Watermark/" "TwitterFilter/" "test/" "systematic trading/" "startup.py" "sitepackage/" "SFTP/" "setup.py" "securityscreening/" "researchproject/" "README.md" "PyDataServices/" "PortfolioMgmtTool/" "PATrading/" "PaperPortfolio/" "master" "marketsurveillance/" "logs/" "libs/" "git" "geomaps/" "FixDropCopy/" "factsheet/" "emacs.bat" "build/" "booksnrecords/" "bbgserver/" "autojob/" "authentication/" ".git/" "../" "./")
+
+ ("c:/Users/cliu.WFI/Desktop/WFI/pylib/libs/app_template/auth/" (23714 61730 0 0) "__pycache__/" "__init__.py" "templates/" "static/" "models.py" "forms.py" "../" "./")
+
+ ("c:/Users/cliu.WFI/Desktop/WFI/pylib/systematic trading/strategy/EMC_backtest/" (23708 7125 0 0) "perf.xlsx" "perf.csv" "mapped_data.pkl" "libs/" "generate_data.py" "data.h5" "../" "./")
+
+ ("c:/Users/cliu.WFI/Desktop/WFI/pylib/website/static/" (23715 25438 0 0) "src/" "sensitivityanalysis/" "securityscreening/" "securityprofile/" "portfolioanalytics/" "personaltrading/" "paperportfolio/" "marketsurveillance/" "geomaps/" "factsheet/" "dailysignoff/" "cashreconciliation/" "../" "./")
+
+ ("c:/Users/cliu.WFI/Desktop/WFI/pylib/pa_trading/" (23714 44750 0 0) "test.py" "sharepoint_operation/" "log/" "impl/" "app_pt.py" "../" "./")
+
+ ("c:/Users/cliu.WFI/Desktop/WFI/pylib/researchproject/" (23699 45367 0 0) "vessel_tracking/" "portfoliobeta/" "fammafrench/" "EquityMomentumInBond/" "EIA_monthly_weekly/" "EIA_API return/" "continues_futures/" "BrentSpread/" "../" "./")
+
+ ("c:/Users/cliu.WFI/Desktop/WFI/pylib/libs/zipline/gens/" (23708 10229 0 0) "__pycache__/" "__init__.py" "utils.py" "tradesimulation.py" "sim_engine.pyx" "sim_engine.pyd" "composites.py" "../" "./")
+
+ ("c:/Users/cliu.WFI/Desktop/WFI/pylib/systematic trading/" (23707 53226 0 0) "zip_root/" "zip_cython_obj/" "workstation/" "test/" "strategy/" "save/" "rawdata/" "Python/" "New Microsoft Excel Worksheet.xlsx" "log/" "libs/" "ingestdata/" "extension.py" "emacs.bat" "datacollect/" "data/" "backtest_vix_short_constant_leverage.py" "backtests/" "api_test/" "../" "./")
+
+ ("c:/Users/cliu.WFI/Desktop/WFI/pylib/systematic trading/strategy/" (23707 58645 0 0) "Volatility/" "MeanReverseSpread/" "examples/" "EMC_backtest/" "CLcomdity/" "../" "./")
+
+ ("c:/Users/cliu.WFI/Desktop/WFI/pylib/libs/zipline/finance/time/" (23705 17982 0 0) "__pycache__/" "__init__.py" "daycounter.py" "../" "./")
+
+ ("c:/Users/cliu.WFI/Desktop/WFI/pylib/libs/app_template/auth/__pycache__/" (23511 5440 0 0) "__init__.cpython-34.pyc" "models.cpython-34.pyc" "forms.cpython-34.pyc" "../" "./")
+
+ ("c:/Users/cliu.WFI/Desktop/WFI/pylib/libs/app_template/" (23689 5449 0 0) "__pycache__/" "__init__.py" "templates/" "static/" "auth/" "../" "./")
+
+ ("c:/Users/cliu.WFI/Desktop/WFI/pylib/libs/analytic/collection/" (23673 17310 0 0) "__pycache__/" "securitycollection.py" "../" "./")
+
+ ("c:/Users/cliu.WFI/Desktop/WFI/pylib/factsheet/" (23652 28928 0 0) "__pycache__/" "__init__.py" "top_exposure.py" "return_type.py" "pnl_contrib.xlsx" "pnl_contrib.csv" "pnl_contrib-carino.xlsx" "multiperiod_return_contribution.py" "factsheet_soap.py" "factsheet_impl.py" "emacs.bat" "delete/" "config.py" "bp_factsheet.py" "auth.py" "app_factsheet.py" "../" "./")
+
+ ("c:/Users/cliu.WFI/Desktop/WFI/pylib/libs/wfi_app_template/" (23668 42526 0 0) "templates/" "static/" "auth/" "../" "./")
+
+ ("c:/Users/cliu.WFI/Desktop/WFI/pylib/libs/wfi_app_template/templates/" (23668 42526 0 0) "template.html" "index.html" "base.html" "../" "./")
+
+ ("c:/Users/cliu.WFI/Desktop/WFI/pylib/researchproject/vessel_tracking/" (23631 5966 0 0) "vessel_in_service_tankers_1_26.csv" "vessel_in_service_tankers_1_25.csv" "vessel_in_service_tankers_1_24.csv" "vessel_in_service_tankers_1_23.csv" "vessel_in_service_tankers_1_22.csv" "upload.bat" "tracking_data.py" "geomaps/" "emacs.bat" "dataupload.py" "datamaps.js" "datamaps-0.5.0/" "data/" "../" "./")
+
+ ("c:/Users/cliu.WFI/Desktop/WFI/pylib/website/static/securityscreening/css/" (23651 3047 0 0) "style_bond.css" "common_style.css" "color_bond_monitored.css" "color_bond.css" "../" "./")
+
+ ("c:/Users/cliu.WFI/Desktop/WFI/pylib/securityscreening/" (23669 36697 0 0) "__pycache__/" "screening_client.py" "run_bondscreen.bat" "delete/" "config.py" "bp_securityscreening.py" "bondscreening_workers.py" "app_securityscreening.py" "../" "./")
+
+ ("c:/Users/cliu.WFI/Desktop/WFI/pylib/test/lazycal/" (23670 5907 0 0) "__pycache__/" "test2.py" "test.py" "../" "./")
+
+ ("c:/Users/cliu.WFI/Desktop/WFI/pylib/website/static/src/widget/sectimeline/" (23451 47219 0 0) "template.html" "sectimeline2.js" "sectimeline.js" "sectimeline.css" "../" "./")
+
+ ("c:/Users/cliu.WFI/Desktop/WFI/pylib/website/static/securityscreening/" (23651 2864 0 0) "src/" "css/" "bond_summary.html" "bond_monitored.html" "bond_by_industry.html" "bond.html" "../" "./")
+
+ ("c:/Users/cliu.WFI/Desktop/WFI/pylib/website/static/securityscreening/src/" (23651 3007 0 0) "script_bond_summary.js" "script_bond_monitored.js" "script_bond_by_industry.js" "script_bond_auto.js" "script_bond.js" "delete/" "common_func.js" "../" "./")
+
+ ("c:/Users/cliu.WFI/Desktop/WFI/pylib/libs/utils/" (23627 32843 0 0) "__pycache__/" "__init__.py" "timer.py" "time/" "spyne_utils.py" "exception.py" "../" "./")
+
+ ("c:/Users/cliu.WFI/Desktop/WFI/pylib/website/static/dailysignoff/" (23549 52736 0 0) "src/" "main.html" "css/" "cob_ver2.html" "cob.html" "../" "./")
+
+ ("c:/Users/cliu.WFI/Desktop/WFI/pylib/website/static/dailysignoff/src/" (23549 59898 0 0) "script_cob_ver2.js" "script_cob.js" "script.js" "initialize_cob.js" "../" "./")
+
+ ("c:/Users/cliu.WFI/Desktop/WFI/pylib/test/download_html/" (23617 19545 0 0) "downhtml.py" "aa.html" "../" "./")
+
+ ("c:/Users/cliu.WFI/Desktop/WFI/pylib/libs/office365/sharepoint/" (23549 25231 0 0) "__pycache__/" "__init__.py" "web_creation_information.py" "web_collection.py" "web.py" "view_collection.py" "view.py" "user_collection.py" "userprofiles/" "user.py" "taxonomy/" "site.py" "securable_object.py" "search/" "publishing/" "principal.py" "list_creation_information.py" "list_collection.py" "listitem_creation_information.py" "listItem_collection.py" "listitem.py" "list.py" "group_collection.py" "group.py" "folder_collection.py" "folder.py" "file_creation_information.py" "file_collection.py" "file.py" "field.py" "content_type_collection.py" "content_type.py" "client_context.py" "../" "./")
+)
+
+;; ----- ido-unc-hosts-cache -----
+t
