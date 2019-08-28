@@ -11,6 +11,22 @@
 (add-lib-path "elpa/yasnippet-20190724.1204")
 (require 'elpy)
 (elpy-enable)
-(setq python-shell-interpreter "ipython")
+
 (setq elpy-shell-use-project-root nil)  ;; C-c C-c will switch to file folder
+(setq elpy-shell-display-buffer-after-send t)
 (add-hook 'elpy-mode (lambda () (auto-complete-mode -1)))
+
+;; http://manpages.ubuntu.com/manpages/eoan/man1/elpy.1.html
+(setq python-shell-interpreter "ipython")
+;; python-shell-interpreter-args "--pylab=qt5 --pdb --nosep --classic"
+
+;; python-shell-prompt-regexp ">>> "
+;; python-shell-prompt-output-regexp ""
+;; python-shell-completion-setup-code "from IPython.core.completerlib import module_completion"
+;; python-shell-completion-module-string-code "';'.join(module_completion('''%s'''))\n"
+;; python-shell-completion-string-code "';'.join(get_ipython().Completer.all_completions('''%s'''))\n"
+
+
+;; ------------- useful tool ---------
+;; profiling
+;; M-x elpy-profile-buffer-or-region
