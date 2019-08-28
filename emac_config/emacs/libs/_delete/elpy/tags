@@ -1,0 +1,225 @@
+"elpy"	elpy-pkg.el	/^(define-package "elpy" "1.11.0"$/
+elpy	elpy.el	/^(defgroup elpy nil$/
+elpy--fix-code-with-formatter	elpy.el	/^(defun elpy--fix-code-with-formatter (method)$/
+elpy--nav-move-line-vertically	elpy.el	/^(defun elpy--nav-move-line-vertically (dir)$/
+elpy--nav-move-region-vertically	elpy.el	/^(defun elpy--nav-move-region-vertically (beg end d/
+elpy--sort-and-strip-duplicates	elpy.el	/^(defun elpy--sort-and-strip-duplicates (seq)$/
+elpy-autopep8-fix-code	elpy.el	/^(defun elpy-autopep8-fix-code ()$/
+elpy-buffer--replace-block	elpy.el	/^(defun elpy-buffer--replace-block (spec)$/
+elpy-buffer--replace-region	elpy.el	/^(defun elpy-buffer--replace-region (beg end rep)$/
+elpy-check	elpy.el	/^(defun elpy-check (&optional whole-project-p)$/
+elpy-company--cache	elpy.el	/^(defvar elpy-company--cache nil$/
+elpy-company--cache-annotation	elpy.el	/^(defun elpy-company--cache-annotation (name)$/
+elpy-company--cache-clear	elpy.el	/^(defun elpy-company--cache-clear ()$/
+elpy-company--cache-completions	elpy.el	/^(defun elpy-company--cache-completions (prefix res/
+elpy-company--cache-meta	elpy.el	/^(defun elpy-company--cache-meta (name)$/
+elpy-company--cache-name	elpy.el	/^(defun elpy-company--cache-name (name)$/
+elpy-company--python-exception-p	elpy.el	/^(defun elpy-company--python-exception-p (name)$/
+elpy-company-backend	elpy.el	/^(defun elpy-company-backend (command &optional arg/
+elpy-company-post-complete-parens	elpy.el	/^(defun elpy-company-post-complete-parens (annotati/
+elpy-company-post-completion-function	elpy.el	/^(defcustom elpy-company-post-completion-function$/
+elpy-config	elpy.el	/^(defun elpy-config ()$/
+elpy-config--get-config	elpy.el	/^(defvar elpy-config--get-config "import json$/
+elpy-config--get-config	elpy.el	/^(defun elpy-config--get-config ()$/
+elpy-config--insert-configuration-problems	elpy.el	/^(defun elpy-config--insert-configuration-problems /
+elpy-config--insert-configuration-table	elpy.el	/^(defun elpy-config--insert-configuration-table (&o/
+elpy-config--insert-help	elpy.el	/^(defun elpy-config--insert-help ()$/
+elpy-config--package-link	elpy.el	/^(defun elpy-config--package-link (name version lat/
+elpy-config--related-custom-groups	elpy.el	/^(defvar elpy-config--related-custom-groups$/
+elpy-config-error	elpy.el	/^(defun elpy-config-error (&optional fmt &rest args/
+elpy-dedicated-shells	elpy.el	/^(defcustom elpy-dedicated-shells nil$/
+elpy-disable	elpy.el	/^(defun elpy-disable ()$/
+elpy-disable-backend-error-display	elpy.el	/^(defcustom elpy-disable-backend-error-display nil$/
+elpy-doc	elpy.el	/^(defun elpy-doc ()$/
+elpy-doc--read-identifier-from-minibuffer	elpy.el	/^(defun elpy-doc--read-identifier-from-minibuffer (/
+elpy-doc--show	elpy.el	/^(defun elpy-doc--show (documentation)$/
+elpy-doc--symbol-at-point	elpy.el	/^(defun elpy-doc--symbol-at-point ()$/
+elpy-doc-history	elpy.el	/^(defvar elpy-doc-history nil$/
+elpy-eldoc-documentation	elpy.el	/^(defun elpy-eldoc-documentation ()$/
+elpy-eldoc-show-current-function	elpy.el	/^(defcustom elpy-eldoc-show-current-function t$/
+elpy-enable	elpy.el	/^(defun elpy-enable (&optional ignored)$/
+elpy-find--module-path	elpy.el	/^(defun elpy-find--module-path (module)$/
+elpy-find--resolve-module	elpy.el	/^(defun elpy-find--resolve-module (module)$/
+elpy-find--test-file	elpy.el	/^(defun elpy-find--test-file ()$/
+elpy-find-file	elpy.el	/^(defun elpy-find-file (&optional dwim)$/
+elpy-flymake--standard-value	elpy.el	/^(defun elpy-flymake--standard-value (var)$/
+elpy-flymake-error-at-point	elpy.el	/^(defun elpy-flymake-error-at-point ()$/
+elpy-flymake-next-error	elpy.el	/^(defun elpy-flymake-next-error ()$/
+elpy-flymake-previous-error	elpy.el	/^(defun elpy-flymake-previous-error ()$/
+elpy-flymake-python-init	elpy.el	/^(defun elpy-flymake-python-init ()$/
+elpy-flymake-show-error	elpy.el	/^(defun elpy-flymake-show-error ()$/
+elpy-format-code	elpy.el	/^(defun elpy-format-code ()$/
+elpy-goto-definition	elpy.el	/^(defun elpy-goto-definition ()$/
+elpy-goto-definition-other-window	elpy.el	/^(defun elpy-goto-definition-other-window ()$/
+elpy-goto-location	elpy.el	/^(defun elpy-goto-location (filename offset &option/
+elpy-importmagic--add-import-read-args	elpy.el	/^(defun elpy-importmagic--add-import-read-args (&op/
+elpy-importmagic-add-import	elpy.el	/^(defun elpy-importmagic-add-import (statement)$/
+elpy-importmagic-fixup	elpy.el	/^(defun elpy-importmagic-fixup ()$/
+elpy-insert--header	elpy.el	/^(defun elpy-insert--header (&rest text)$/
+elpy-insert--para	elpy.el	/^(defun elpy-insert--para (&rest messages)$/
+elpy-insert--pip-button	elpy.el	/^(define-widget 'elpy-insert--pip-button 'item$/
+elpy-insert--pip-button-action	elpy.el	/^(defun elpy-insert--pip-button-action (widget &opt/
+elpy-insert--pip-button-value-create	elpy.el	/^(defun elpy-insert--pip-button-value-create (widge/
+elpy-insert--popup	elpy.el	/^(defmacro elpy-insert--popup (buffer-name &rest bo/
+elpy-library-root	elpy.el	/^(defun elpy-library-root ()$/
+elpy-mode	elpy.el	/^(define-minor-mode elpy-mode$/
+elpy-mode-hook	elpy.el	/^(defcustom elpy-mode-hook nil$/
+elpy-mode-map	elpy.el	/^(defvar elpy-mode-map$/
+elpy-module-company	elpy.el	/^(defun elpy-module-company (command &rest args)$/
+elpy-module-eldoc	elpy.el	/^(defun elpy-module-eldoc (command &rest args)$/
+elpy-module-flymake	elpy.el	/^(defun elpy-module-flymake (command &rest args)$/
+elpy-module-highlight-indentation	elpy.el	/^(defun elpy-module-highlight-indentation (command /
+elpy-module-pyvenv	elpy.el	/^(defun elpy-module-pyvenv (command &rest args)$/
+elpy-module-sane-defaults	elpy.el	/^(defun elpy-module-sane-defaults (command &rest ar/
+elpy-module-yasnippet	elpy.el	/^(defun elpy-module-yasnippet (command &rest args)$/
+elpy-modules	elpy.el	/^(defcustom elpy-modules '(elpy-module-sane-default/
+elpy-modules-buffer-init	elpy.el	/^(defun elpy-modules-buffer-init ()$/
+elpy-modules-buffer-stop	elpy.el	/^(defun elpy-modules-buffer-stop ()$/
+elpy-modules-global-init	elpy.el	/^(defun elpy-modules-global-init ()$/
+elpy-modules-global-stop	elpy.el	/^(defun elpy-modules-global-stop ()$/
+elpy-modules-initialized-p	elpy.el	/^(defvar elpy-modules-initialized-p nil$/
+elpy-modules-remove-modeline-lighter	elpy.el	/^(defun elpy-modules-remove-modeline-lighter (mode-/
+elpy-modules-run	elpy.el	/^(defun elpy-modules-run (command &rest args)$/
+elpy-multiedit	elpy.el	/^(defun elpy-multiedit ()$/
+elpy-multiedit--overlay-changed	elpy.el	/^(defun elpy-multiedit--overlay-changed (ov after-c/
+elpy-multiedit--overlays-in-p	elpy.el	/^(defun elpy-multiedit--overlays-in-p (beg end)$/
+elpy-multiedit--usages	elpy.el	/^(defun elpy-multiedit--usages (usages)$/
+elpy-multiedit-add-overlay	elpy.el	/^(defun elpy-multiedit-add-overlay (beg end)$/
+elpy-multiedit-overlays	elpy.el	/^(defvar elpy-multiedit-overlays nil$/
+elpy-multiedit-python-symbol-at-point	elpy.el	/^(defun elpy-multiedit-python-symbol-at-point (&opt/
+elpy-multiedit-stop	elpy.el	/^(defun elpy-multiedit-stop ()$/
+elpy-nav-backward-block	elpy.el	/^(defun elpy-nav-backward-block ()$/
+elpy-nav-backward-indent	elpy.el	/^(defun elpy-nav-backward-indent ()$/
+elpy-nav-expand--initial-position	elpy.el	/^(defvar elpy-nav-expand--initial-position nil$/
+elpy-nav-expand-to-indentation	elpy.el	/^(defun elpy-nav-expand-to-indentation ()$/
+elpy-nav-forward-block	elpy.el	/^(defun elpy-nav-forward-block ()$/
+elpy-nav-forward-indent	elpy.el	/^(defun elpy-nav-forward-indent ()$/
+elpy-nav-indent-shift-left	elpy.el	/^(defun elpy-nav-indent-shift-left (&optional count/
+elpy-nav-indent-shift-right	elpy.el	/^(defun elpy-nav-indent-shift-right (&optional coun/
+elpy-nav-move-line-or-region-down	elpy.el	/^(defun elpy-nav-move-line-or-region-down (&optiona/
+elpy-nav-move-line-or-region-up	elpy.el	/^(defun elpy-nav-move-line-or-region-up (&optional /
+elpy-nav-normalize-region	elpy.el	/^(defun elpy-nav-normalize-region ()$/
+elpy-news	elpy.el	/^(defun elpy-news ()$/
+elpy-occur-definitions	elpy.el	/^(defun elpy-occur-definitions ()$/
+elpy-open-and-indent-line-above	elpy.el	/^(defun elpy-open-and-indent-line-above ()$/
+elpy-open-and-indent-line-below	elpy.el	/^(defun elpy-open-and-indent-line-below ()$/
+elpy-project--read-project-variable	elpy.el	/^(defun elpy-project--read-project-variable (prompt/
+elpy-project--read-variable-value	elpy.el	/^(defun elpy-project--read-variable-value (prompt v/
+elpy-project--variable-name-history	elpy.el	/^(defvar elpy-project--variable-name-history nil$/
+elpy-project-find-git-root	elpy.el	/^(defun elpy-project-find-git-root ()$/
+elpy-project-find-hg-root	elpy.el	/^(defun elpy-project-find-hg-root ()$/
+elpy-project-find-projectile-root	elpy.el	/^(defun elpy-project-find-projectile-root ()$/
+elpy-project-find-python-root	elpy.el	/^(defun elpy-project-find-python-root ()$/
+elpy-project-find-svn-root	elpy.el	/^(defun elpy-project-find-svn-root ()$/
+elpy-project-ignored-directories	elpy.el	/^(defcustom elpy-project-ignored-directories ' (".b/
+elpy-project-root	elpy.el	/^(defcustom elpy-project-root nil$/
+elpy-project-root	elpy.el	/^(defun elpy-project-root ()$/
+elpy-project-root-finder-functions	elpy.el	/^(defcustom elpy-project-root-finder-functions$/
+elpy-promise	elpy.el	/^(defun elpy-promise (success &optional error)$/
+elpy-promise-buffer	elpy.el	/^(defsubst elpy-promise-buffer (promise)$/
+elpy-promise-error-callback	elpy.el	/^(defsubst elpy-promise-error-callback (promise)$/
+elpy-promise-marker	elpy.el	/^(defvar elpy-promise-marker (make-symbol "*elpy-pr/
+elpy-promise-p	elpy.el	/^(defun elpy-promise-p (obj)$/
+elpy-promise-reject	elpy.el	/^(defun elpy-promise-reject (promise reason)$/
+elpy-promise-resolve	elpy.el	/^(defun elpy-promise-resolve (promise value)$/
+elpy-promise-resolved-p	elpy.el	/^(defsubst elpy-promise-resolved-p (promise)$/
+elpy-promise-set-resolved	elpy.el	/^(defsubst elpy-promise-set-resolved (promise)$/
+elpy-promise-success-callback	elpy.el	/^(defsubst elpy-promise-success-callback (promise)$/
+elpy-promise-wait	elpy.el	/^(defun elpy-promise-wait (promise &optional timeou/
+elpy-refactor	elpy-refactor.el	/^(defun elpy-refactor ()$/
+elpy-refactor-build-arguments	elpy-refactor.el	/^(defun elpy-refactor-build-arguments (args pos)$/
+elpy-refactor-changes	elpy-refactor.el	/^(defvar elpy-refactor-changes nil$/
+elpy-refactor-commit	elpy-refactor.el	/^(defun elpy-refactor-commit ()$/
+elpy-refactor-create-change-buffer	elpy-refactor.el	/^(defun elpy-refactor-create-change-buffer (changes/
+elpy-refactor-insert-changes	elpy-refactor.el	/^(defun elpy-refactor-insert-changes (changes)$/
+elpy-refactor-map	elpy.el	/^(defvar elpy-refactor-map$/
+elpy-refactor-mode	elpy-refactor.el	/^(define-derived-mode elpy-refactor-mode diff-mode /
+elpy-refactor-mode-map	elpy-refactor.el	/^(defvar elpy-refactor-mode-map$/
+elpy-refactor-options	elpy-refactor.el	/^(defun elpy-refactor-options (option)$/
+elpy-refactor-rpc-get-changes	elpy-refactor.el	/^(defun elpy-refactor-rpc-get-changes (method args)/
+elpy-refactor-rpc-get-options	elpy-refactor.el	/^(defun elpy-refactor-rpc-get-options ()$/
+elpy-refactor-select	elpy-refactor.el	/^(defun elpy-refactor-select (options)$/
+elpy-refactor-window-configuration	elpy-refactor.el	/^(defvar elpy-refactor-window-configuration nil$/
+elpy-remove-modeline-lighter	elpy.el	/^(defcustom elpy-remove-modeline-lighter t$/
+elpy-rgrep-file-pattern	elpy.el	/^(defcustom elpy-rgrep-file-pattern "*.py"$/
+elpy-rgrep-symbol	elpy.el	/^(defun elpy-rgrep-symbol (regexp)$/
+elpy-rpc	elpy.el	/^(defun elpy-rpc (method params &optional success e/
+elpy-rpc--backend-callbacks	elpy.el	/^(defvar elpy-rpc--backend-callbacks nil$/
+elpy-rpc--backend-library-root	elpy.el	/^(defvar elpy-rpc--backend-library-root nil$/
+elpy-rpc--backend-python-command	elpy.el	/^(defvar elpy-rpc--backend-python-command nil$/
+elpy-rpc--buffer	elpy.el	/^(defvar elpy-rpc--buffer nil$/
+elpy-rpc--buffer-contents	elpy.el	/^(defun elpy-rpc--buffer-contents ()$/
+elpy-rpc--buffer-p	elpy.el	/^(defvar elpy-rpc--buffer-p nil$/
+elpy-rpc--call	elpy.el	/^(defun elpy-rpc--call (method-name params success /
+elpy-rpc--call-blocking	elpy.el	/^(defun elpy-rpc--call-blocking (method-name params/
+elpy-rpc--call-id	elpy.el	/^(defvar elpy-rpc--call-id 0$/
+elpy-rpc--check-backend-version	elpy.el	/^(defun elpy-rpc--check-backend-version (rpc-versio/
+elpy-rpc--cleanup-buffers	elpy.el	/^(defun elpy-rpc--cleanup-buffers ()$/
+elpy-rpc--default-error-callback	elpy.el	/^(defun elpy-rpc--default-error-callback (error-obj/
+elpy-rpc--disconnect	elpy.el	/^(defun elpy-rpc--disconnect ()$/
+elpy-rpc--environment	elpy.el	/^(defun elpy-rpc--environment ()$/
+elpy-rpc--filter	elpy.el	/^(defun elpy-rpc--filter (process output)$/
+elpy-rpc--find-buffer	elpy.el	/^(defun elpy-rpc--find-buffer (library-root python-/
+elpy-rpc--get-rpc-buffer	elpy.el	/^(defun elpy-rpc--get-rpc-buffer ()$/
+elpy-rpc--handle-json	elpy.el	/^(defun elpy-rpc--handle-json (json)$/
+elpy-rpc--handle-unexpected-line	elpy.el	/^(defun elpy-rpc--handle-unexpected-line (line)$/
+elpy-rpc--last-call	elpy.el	/^(defvar elpy-rpc--last-call nil$/
+elpy-rpc--last-error-popup	elpy.el	/^(defvar elpy-rpc--last-error-popup nil$/
+elpy-rpc--open	elpy.el	/^(defun elpy-rpc--open (library-root python-command/
+elpy-rpc--process-buffer-p	elpy.el	/^(defun elpy-rpc--process-buffer-p (buffer)$/
+elpy-rpc--region-contents	elpy.el	/^(defun elpy-rpc--region-contents ()$/
+elpy-rpc--register-callback	elpy.el	/^(defun elpy-rpc--register-callback (call-id promis/
+elpy-rpc--sentinel	elpy.el	/^(defun elpy-rpc--sentinel (process event)$/
+elpy-rpc-backend	elpy.el	/^(defcustom elpy-rpc-backend nil$/
+elpy-rpc-error-timeout	elpy.el	/^(defcustom elpy-rpc-error-timeout 30$/
+elpy-rpc-get-calltip	elpy.el	/^(defun elpy-rpc-get-calltip (&optional success err/
+elpy-rpc-get-completion-docstring	elpy.el	/^(defun elpy-rpc-get-completion-docstring (completi/
+elpy-rpc-get-completion-location	elpy.el	/^(defun elpy-rpc-get-completion-location (completio/
+elpy-rpc-get-completions	elpy.el	/^(defun elpy-rpc-get-completions (&optional success/
+elpy-rpc-get-definition	elpy.el	/^(defun elpy-rpc-get-definition (&optional success /
+elpy-rpc-get-docstring	elpy.el	/^(defun elpy-rpc-get-docstring (&optional success e/
+elpy-rpc-get-pydoc-completions	elpy.el	/^(defun elpy-rpc-get-pydoc-completions (prefix &opt/
+elpy-rpc-get-pydoc-documentation	elpy.el	/^(defun elpy-rpc-get-pydoc-documentation (symbol &o/
+elpy-rpc-get-usages	elpy.el	/^(defun elpy-rpc-get-usages (&optional success erro/
+elpy-rpc-ignored-buffer-size	elpy.el	/^(defcustom elpy-rpc-ignored-buffer-size 102400$/
+elpy-rpc-init	elpy.el	/^(defun elpy-rpc-init (backend library-root &option/
+elpy-rpc-large-buffer-size	elpy.el	/^(defcustom elpy-rpc-large-buffer-size 4096$/
+elpy-rpc-maximum-buffer-age	elpy.el	/^(defcustom elpy-rpc-maximum-buffer-age (* 5 60)$/
+elpy-rpc-python-command	elpy.el	/^(defcustom elpy-rpc-python-command (if (equal syst/
+elpy-rpc-pythonpath	elpy.el	/^(defcustom elpy-rpc-pythonpath (file-name-director/
+elpy-rpc-restart	elpy.el	/^(defun elpy-rpc-restart ()$/
+elpy-rpc-timeout	elpy.el	/^(defcustom elpy-rpc-timeout 1$/
+elpy-set-project-root	elpy.el	/^(defun elpy-set-project-root (new-root)$/
+elpy-set-project-variable	elpy.el	/^(defun elpy-set-project-variable (variable value)$/
+elpy-set-test-runner	elpy.el	/^(defun elpy-set-test-runner (test-runner)$/
+elpy-set-test-runner-history	elpy.el	/^(defvar elpy-set-test-runner-history nil$/
+elpy-shell--region-without-indentation	elpy.el	/^(defun elpy-shell--region-without-indentation (beg/
+elpy-shell-display-buffer	elpy.el	/^(defun elpy-shell-display-buffer ()$/
+elpy-shell-get-or-create-process	elpy.el	/^(defun elpy-shell-get-or-create-process ()$/
+elpy-shell-send-current-statement	elpy.el	/^(defun elpy-shell-send-current-statement ()$/
+elpy-shell-send-region-or-buffer	elpy.el	/^(defun elpy-shell-send-region-or-buffer (&optional/
+elpy-shell-switch-to-buffer	elpy.el	/^(defun elpy-shell-switch-to-buffer ()$/
+elpy-shell-switch-to-shell	elpy.el	/^(defun elpy-shell-switch-to-shell ()$/
+elpy-test	elpy.el	/^(defun elpy-test (&optional test-whole-project)$/
+elpy-test--current-test-name	elpy.el	/^(defun elpy-test--current-test-name ()$/
+elpy-test--module-name-for-file	elpy.el	/^(defun elpy-test--module-name-for-file (top-level /
+elpy-test-at-point	elpy.el	/^(defun elpy-test-at-point ()$/
+elpy-test-discover-runner	elpy.el	/^(defun elpy-test-discover-runner (top file module /
+elpy-test-discover-runner-command	elpy.el	/^(defcustom elpy-test-discover-runner-command '("py/
+elpy-test-django-runner	elpy.el	/^(defun elpy-test-django-runner (top file module te/
+elpy-test-django-runner-command	elpy.el	/^(defcustom elpy-test-django-runner-command '("djan/
+elpy-test-nose-runner	elpy.el	/^(defun elpy-test-nose-runner (top file module test/
+elpy-test-nose-runner-command	elpy.el	/^(defcustom elpy-test-nose-runner-command '("nosete/
+elpy-test-pytest-runner	elpy.el	/^(defun elpy-test-pytest-runner (top file module te/
+elpy-test-pytest-runner-command	elpy.el	/^(defcustom elpy-test-pytest-runner-command '("py.t/
+elpy-test-run	elpy.el	/^(defun elpy-test-run (working-directory command &r/
+elpy-test-runner	elpy.el	/^(defcustom elpy-test-runner 'elpy-test-discover-ru/
+elpy-test-runner-p	elpy.el	/^(defun elpy-test-runner-p (obj)$/
+elpy-test-trial-runner	elpy.el	/^(defun elpy-test-trial-runner (top file module tes/
+elpy-test-trial-runner-command	elpy.el	/^(defcustom elpy-test-trial-runner-command '("trial/
+elpy-use-cpython	elpy.el	/^(defun elpy-use-cpython (&optional cpython)$/
+elpy-use-ipython	elpy.el	/^(defun elpy-use-ipython (&optional ipython)$/
+elpy-version	elpy.el	/^(defconst elpy-version "1.11.0"$/
+elpy-version	elpy.el	/^(defun elpy-version ()$/
+elpy-yapf-fix-code	elpy.el	/^(defun elpy-yapf-fix-code ()$/
+keyboard-quit	elpy.el	/^(defadvice keyboard-quit (before collapse-region a/
