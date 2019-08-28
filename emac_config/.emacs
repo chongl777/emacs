@@ -79,7 +79,7 @@
  '(frame-background-mode (quote dark))
  '(js2-strict-inconsistent-return-warning nil)
  '(js2-strict-missing-semi-warning nil)
- '(python-shell-interpreter "ipython")
+ '(package-selected-packages (quote (auctex)))
  '(send-mail-function (quote smtpmail-send-it)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
@@ -88,3 +88,5 @@
  ;; If there is more than one, they won't work right.
  )
 (put 'set-goal-column 'disabled nil)
+
+(global-set-key (kbd "C-c C-k") 'comint-kill-region)
