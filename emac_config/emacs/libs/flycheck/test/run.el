@@ -1,9 +1,11 @@
 ;;; run.el --- Flycheck: Test runner    -*- lexical-binding: t; -*-
 
+;; Copyright (C) 2017-2018 Flycheck contributors
 ;; Copyright (C) 2014-2016 Sebastian Wiesner and Flycheck contributors
 
 ;; Author: Sebastian Wiesner <swiesner@lunaryorn.com>
-;; Maintainer: Sebastian Wiesner <swiesner@lunaryorn.com>
+;; Maintainer: Clément Pit-Claudel <clement.pitclaudel@live.com>
+;;             fmdkdd <fmdkdd@gmail.com>
 ;; URL: https://www.flycheck.org
 
 ;; This file is not part of GNU Emacs.
@@ -98,7 +100,19 @@ Node `(ert)Test Selectors' for information about test selectors."
                        (error
                         (flycheck-run-check-selector selector)
                         (kill-emacs 1)))))))
+    (flycheck-run-unlimit-ert-pretty-printer)
     (ert-run-tests-batch-and-exit (flycheck-transform-selector selector))))
+
+;; ERT in batch mode will truncate long output by default.  We don't want that,
+;; as it's easier to fix failures with the full output, since we cannot always
+;; easily reproduce locally (for integration tests running on CI).
+(defun flycheck-run-unlimit-ert-pretty-printer ()
+  "Install advice to unlimit the ERT output."
+  (advice-add 'ert--pp-with-indentation-and-newline :around
+              (lambda (orig &rest args)
+                (let ((print-length nil)
+                      (print-level nil))
+                  (apply orig args)))))
 
 (defvar flycheck-runner-file
   (if load-in-progress load-file-name (buffer-file-name)))
@@ -107,7 +121,14 @@ Node `(ert)Test Selectors' for information about test selectors."
   "Main entry point of the test runner."
   (let* ((load-prefer-newer t)
          (source-directory (locate-dominating-file flycheck-runner-file "Cask"))
-         (pkg-rel-dir (format ".cask/%s/elpa" emacs-version)))
+         (pkg-rel-dir (format ".cask/%s.%S/elpa"
+                              emacs-major-version
+                              emacs-minor-version)))
+
+    ;; Standardise on the C locale to prevent programs from writing fancy
+    ;; unicode characters and thus make test output predictable
+    (setenv "LC_ALL" "C")
+
     (setq package-user-dir (expand-file-name pkg-rel-dir source-directory))
     (package-initialize)
 
@@ -115,12 +136,6 @@ Node `(ert)Test Selectors' for information about test selectors."
              emacs-version (format-time-string "%F" emacs-build-time))
 
     (let ((debug-on-error t))
-      (load (expand-file-name "flycheck" source-directory))
-      (load (expand-file-name "flycheck-ert" source-directory))
-      (load (expand-file-name "flycheck-test"
-                              (file-name-directory flycheck-runner-file)))))
-
-  (let ((debug-on-error t))
-    (flycheck-run-tests-batch-and-exit)))
+      (flycheck-run-tests-batch-and-exit))))
 
 ;;; run.el ends here

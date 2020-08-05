@@ -1,6 +1,6 @@
-;;; test-util.el --- Flycheck Specs: Utilities       -*- lexical-binding: t; -*-
+;;; test-util.el --- Flycheck Specs: Utility functions  -*- lexical-binding: t; -*-
 
-;; Copyright (C) 2013-2016 Sebastian Wiesner and Flycheck contributors
+;; Copyright (C) 2016 Sebastian Wiesner and Flycheck contributors
 
 ;; Author: Sebastian Wiesner <swiesner@lunaryorn.com>
 
@@ -21,106 +21,114 @@
 
 ;;; Commentary:
 
-;; Specs for utility functions.
+;; Specs for Flycheck's utility functions
 
 ;;; Code:
 
 (require 'flycheck-buttercup)
-(require 'epg-config)                   ; For GPG configuration
-(require 'epa-file)                     ; To test encrypted buffers
-
-(defun flycheck/encrypt-string-to-file (string passphrase filename)
-  "Encrypt STRING with PASSPHRASE and write to FILENAME.
-
-This function is ABSOLUTELY INSECURE, use only and exclusively for testing."
-  ;; Encrypt string via GPG, passing it on standard input.  Enforce a pipe for
-  ;; communication with `process-connection-type nil', otherwise gpg tries to
-  ;; read beyond EOF and never finishes.
-  (let* ((process-connection-type nil)
-         (gpg (start-process "flycheck-buttercup-gpg" nil
-                             "gpg" "--batch" "--no-tty" "-c" "--passphrase"
-                             passphrase "-o" filename "-")))
-    (process-send-string gpg string)
-    (process-send-eof gpg)
-    ;; Wait until GPG exists
-    (while (process-live-p gpg)
-      (accept-process-output)
-      (sleep-for 0.1))))
-
-(defun flycheck/gpg-available-p ()
-  "Whether GPG is available or not."
-  ;; `epg-check-configuration' errors if the configuration is invalid, and
-  ;; otherwise returns nil, hence ignore errors and default to `t' to get a
-  ;; proper truthy result
-  (ignore-errors (or (epg-check-configuration (epg-configuration)) t)))
 
 (describe "Utilities"
 
-  (describe "flycheck-encrypted-buffer-p"
-    (let ((gpg-tty (getenv "GPG_TTY"))
-          (gpg-agent-info (getenv "GPG_AGENT_INFO"))
-          (old-home-dir epg-gpg-home-directory)
-          temp-home-dir)
+  (describe "flycheck-buffer-empty-p"
 
-      (before-each
-        ;; Use a temporary directory as home directory for GPG, see
-        ;; https://github.com/flycheck/flycheck/pull/891
-        (setq temp-home-dir (make-temp-file "flycheck-epg-gpg-home" 'dir-flag))
-        (setq epg-gpg-home-directory temp-home-dir)
-        ;; Clear GPG Agent information from environment to prevent gpg from
-        ;; hanging, see https://github.com/flycheck/flycheck/pull/890
-        (mapc #'setenv '("GPG_TTY" "GPG_AGENT_INFO")))
+    (it "considers an empty buffer as empty"
+      (with-temp-buffer
+        (expect (flycheck-buffer-empty-p) :to-be-truthy)))
 
-      (after-each
-        ;; Restore GPG Agent information
-        (setenv "GPG_TTY" gpg-tty)
-        (setenv "GPG_AGENT_INFO" gpg-agent-info)
+    (it "does not consider a buffer with content as empty"
+      (with-temp-buffer
+        (insert "foo bar")
+        (expect (flycheck-buffer-empty-p) :not :to-be-truthy)))
 
-        ;; Delete our custom gpg home directory, and restore the old default
-        (ignore-errors (delete-directory temp-home-dir 'recursive))
-        (setq epg-gpg-home-directory old-home-dir))
+    (it "detects emptiness of narrowed buffers"
+      (with-temp-buffer
+        (insert "foo\nbar")
+        (goto-char (point-min))
+        (narrow-to-region (point-min) (point-min))
+        (expect (buffer-string) :to-equal "")
+        (expect (flycheck-buffer-empty-p) :not :to-be-truthy))))
 
-      (it "considers a temporary buffer as unencrypted"
-        (with-temp-buffer
-          (expect (flycheck-encrypted-buffer-p) :not :to-be-truthy)))
+  (describe "flycheck-buffer-saved-p"
 
-      (it "considers a file buffer as unencrypted"
-        (let ((file-name (make-temp-file "flycheck-file")))
-          (unwind-protect
-              (with-temp-buffer
-                (insert-file-contents file-name 'visit)
-                (set-visited-file-name file-name 'no-query)
-                (expect (flycheck-encrypted-buffer-p) :not :to-be-truthy)
-                (ignore-errors (delete-file file-name))))))
+    (it "considers an unmodified buffer without backing file unsaved"
+      (with-temp-buffer
+        (expect (flycheck-buffer-saved-p) :not :to-be-truthy)))
 
-      (it "recognizes an encrypted buffer"
-        (assume (flycheck/gpg-available-p) "gpg not installed")
+    (it "considers a modified buffer without backing file unsaved"
+      (with-temp-buffer
+        (set-buffer-modified-p t)
+        (expect (flycheck-buffer-saved-p) :not :to-be-truthy)))
 
-        ;; Create a temporary file name.  Do NOT use `make-temp-file' here,
-        ;; because that hangs with the extension `.gpg'.
-        (let* ((file-name (expand-file-name
-                           (concat (make-temp-name "flycheck-encrypted-file")
-                                   ".txt.gpg")
-                           temporary-file-directory))
-               (passphrase "spam with eggs")
-               ;; Teach EPA about the passphrase for our file to decrypt without
-               ;; any user interaction.  `epa-file-passphrase-alist' stores
-               ;; canonical file names, hence we pass the temporary file name
-               ;; through `file-truename' to remove any symlinks in the path.
-               (epa-file-cache-passphrase-for-symmetric-encryption t)
-               (epa-file-passphrase-alist (list (cons (file-truename file-name)
-                                                      passphrase))))
-          (unwind-protect
-              (with-temp-buffer
-                (flycheck/encrypt-string-to-file "Hello world"
-                                                 passphrase file-name)
-                (let ((inhibit-message t))
-                  ;; Silence "Decrypting ..." messages to keep buttercup output
-                  ;; clean
-                  (insert-file-contents file-name 'visit))
-                (set-visited-file-name file-name 'no-query)
+    (it "considers an unmodified buffer with backing file saved"
+      (spy-on 'file-exists-p :and-return-value t)
+      (spy-on 'buffer-file-name :and-return-value "test-buffer-name")
+      (with-temp-buffer
+        (expect (flycheck-buffer-saved-p) :to-be-truthy))
+      (expect (spy-calls-count 'file-exists-p) :to-equal 1)
+      (expect (spy-calls-count 'buffer-file-name) :to-equal 1))
 
-                (expect (flycheck-encrypted-buffer-p) :to-be-truthy))
-            (ignore-errors (delete-file file-name))))))))
+    (it "considers a modified buffer with backing file unsaved"
+      (spy-on 'file-exists-p :and-return-value t)
+      (spy-on 'buffer-file-name :and-return-value "test-buffer-name")
+      (with-temp-buffer
+        (set-buffer-modified-p t)
+        (expect (flycheck-buffer-saved-p) :not :to-be-truthy))
+      (expect (spy-calls-count 'file-exists-p) :to-equal 1)
+      (expect (spy-calls-count 'buffer-file-name) :to-equal 1)))
+
+
+  (describe "flycheck-default-executable-find"
+
+    (describe "non-existing programs"
+      (it "returns nil when given a non-existing program name"
+        (let ((result (flycheck-default-executable-find
+                       "flycheck-nonexisting")))
+          (expect result :to-be nil)))
+
+      (it "returns nil when given a non-existing relative program path"
+        (let ((result (flycheck-default-executable-find
+                       "dir/flycheck-nonexisting")))
+          (expect result :to-be nil)))
+
+      (it "returns nil when given a non-existing absolute program path"
+        (let ((result (flycheck-default-executable-find
+                       "/usr/bin/flycheck-nonexisting")))
+          (expect result :to-be nil))))
+
+    (describe "existing programs with implied suffix"
+      (let (temp-dir program-path)
+        (before-each
+          (setq temp-dir (make-temp-file "flycheck-exec-find-root" 'dir-flag)
+                program-path (expand-file-name
+                              "dir/flycheck-testprog.program" temp-dir))
+          (make-directory (expand-file-name "dir" temp-dir))
+          (write-region "" nil program-path)
+          (set-file-modes program-path
+                          (logior 73 (file-modes program-path))))
+        (after-each
+          (ignore-errors (delete-directory temp-dir 'recursive)))
+
+        (it "resolves the path when given an existing program name"
+          (let* ((default-directory temp-dir)
+                 (exec-path (list (expand-file-name "dir" temp-dir)))
+                 (exec-suffixes '(".program"))
+                 (result (flycheck-default-executable-find
+                          "flycheck-testprog")))
+            (expect result :to-equal program-path)))
+
+        (it "resolves the path when given an existing relative program path"
+          (let* ((default-directory temp-dir)
+                 (exec-suffixes '(".program"))
+                 (result (flycheck-default-executable-find
+                          "dir/flycheck-testprog")))
+            (expect result :to-equal program-path)))
+
+        (it "resolves the path when given an existing absolute program path"
+          (let* ((default-directory temp-dir)
+                 (exec-suffixes '(".program"))
+                 (result (flycheck-default-executable-find
+                          (expand-file-name "dir/flycheck-testprog" temp-dir))))
+            (expect result :to-equal program-path)))))))
+
 
 ;;; test-util.el ends here
