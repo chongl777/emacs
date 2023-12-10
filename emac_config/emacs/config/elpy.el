@@ -1,6 +1,6 @@
 (setq python-indent-offset 4)
 
-(add-lib-path "elpa/elpy-20190725.2259")
+(add-lib-path "elpa/elpy")
 (add-lib-path "elpa/company-20190430.1852")
 (add-lib-path "elpa/find-file-in-project-20190720.313")
 (add-lib-path "elpa/highlight-indentation-20181204.839")
